@@ -1,0 +1,6 @@
+# Ignore NodeJS stuff.
+.cache
+node_modules
+
+# Ignore generated files.
+public
