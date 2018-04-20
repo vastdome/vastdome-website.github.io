@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
+import '../../node_modules/@blueprintjs/core/lib/css/blueprint.css';
+import '../../node_modules/@blueprintjs/icons/lib/css/blueprint-icons.css';
+
 import Header from '../components/header';
 
 const Layout = ({ children, data }) => (
