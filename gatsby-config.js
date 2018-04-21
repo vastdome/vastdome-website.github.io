@@ -1,7 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Nuclear Chain',
-    slogan: 'The next generation cloud.',
+    title: 'Vastdome',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

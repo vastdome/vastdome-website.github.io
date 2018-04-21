@@ -1,8 +1,8 @@
 {
-  "name": "nuclearchain.io",
-  "description": "Website for nuclear chain.",
+  "name": "vastdome.io",
+  "description": "Website for Vastdome.",
   "version": "1.0.0",
-  "author": "Nuclear Chain Developers <developers@nuclearchain.io>",
+  "author": "Vastdome Developers <developers@vastdome.io>",
   "dependencies": {
     "@blueprintjs/core": "^2.2.0",
     "@blueprintjs/icons": "^2.1.1",
@@ -11,6 +11,7 @@
     "gatsby-plugin-nprogress": "^1.0.14",
     "gatsby-plugin-react-helmet": "^2.0.10",
     "gatsby-plugin-sass": "^1.0.26",
+    "normalize.css": "^8.0.0",
     "nprogress": "^0.2.0",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
@@ -20,9 +21,8 @@
   },
   "license": "GPL-3.0",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write 'src/**/*.js'",
+    "build": "./node_modules/bin/gatsby build",
+    "develop": "./node_modules/bin/gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
