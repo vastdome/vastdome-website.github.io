@@ -5,10 +5,18 @@ import { Button, ButtonGroup } from '@blueprintjs/core';
 import './landing.scss';
 
 class Landing extends React.Component {
-  componentWillMount() {
-    this.setState({
-      landingHeight: window.innerHeight,
-    });
+  constructor() {
+    super();
+
+    this.state = { landingHeight: 0 };
+  }
+
+  componentDidMount() {
+    (() => {
+      this.setState({
+        landingHeight: window.innerHeight,
+      });
+    })();
   }
 
   render() {
