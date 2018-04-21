@@ -1,0 +1,127 @@
+/* helper things */
+
+// transforms
+@mixin transform($arguments) {
+  transform: $arguments;
+  -webkit-transform: $arguments;
+  -moz-transform: $arguments;
+  -ms-transform: $arguments;
+  -o-transform: $arguments;
+}
+
+@mixin transform-origin($arguments) {
+  transform-origin: $arguments;
+  -webkit-transform-origin: $arguments;
+  -moz-transform-origin: $arguments;
+  -ms-transform-origin: $arguments;
+  -o-transform-origin: $arguments;
+}
+
+@mixin transform-style($style) {
+  transform-style: $style;
+  -webkit-transform-style: $style;
+  -moz-transform-style: $style;
+  -ms-transform-style: $style;
+  -o-transform-style: $style;
+}
+
+@mixin rotate($deg){
+  @include transform(rotate($deg));
+}
+
+@mixin scale($factor){
+  @include transform(scale($factor));
+}
+
+@mixin translate($x,$y){
+  @include transform(translate($x,$y));
+}
+
+@mixin translate3d($x,$y,$z) {
+  @include transform(translate3d($x,$y,$z));
+}
+
+// transitions
+@mixin transition($arguments) {
+  transition: $arguments;
+  -webkit-transition: $arguments;
+  -moz-transition: $arguments;
+  -ms-transition: $arguments;
+  -o-transition: $arguments;
+}
+
+@mixin transition-delay($delay) {
+  transition-delay: $delay;
+  -webkit-transition-delay: $delay;
+  -moz-transition-delay: $delay;
+  -o-transition-delay: $delay;
+  -ms-transition-delay: $delay;
+}
+
+@mixin transition-duration($duration) {
+  transition-duration: $duration;
+  -webkit-transition-duration: $duration;
+  -moz-transition-duration: $duration;
+  -o-transition-duration: $duration;
+  -ms-transition-duration: $duration;
+}
+
+@mixin transition-property($property) {
+  transition-property: $property;
+  -webkit-transition-property: $property;
+  -moz-transition-property: $property;
+  -o-transition-property: $property;
+  -ms-transition-property: $property;
+}
+
+@mixin transition-timing-function($function) {
+  transition-timing-function: $function;
+  -webkit-transition-timing-function: $function;
+  -moz-transition-timing-function: $function;
+  -o-transition-timing-function: $function;
+  -ms-transition-timing-function: $function;
+}
+
+// box sizing
+@mixin box-sizing($arguments) {
+  box-sizing: $arguments;
+  -webkit-box-sizing: $arguments;
+  -moz-box-sizing: $arguments;
+}
+
+@mixin border-box(){
+  @include box-sizing(border-box);
+}
+
+@mixin content-box(){
+  @include box-sizing(content-box);
+}
+
+// box shadows
+@mixin box-shadow($args) {
+  box-shadow: $args;
+  -webkit-box-shadow: $args;
+  -moz-box-shadow: $args;
+}
+
+@mixin inner-shadow($args) {
+  @include box-shadow(inset $args);
+}
+
+// border radius
+@mixin border-radius($args) {
+  border-radius: $args;
+  -webkit-border-radius: $args;
+  -moz-border-radius: $args;
+
+  background-clip: padding-box;
+}
+
+// alpha color generator
+@mixin color-with-alpha($color, $alpha) {
+  color: transparentize($color, 1-$alpha);
+}
+
+@mixin color-with-alpha-background($color, $alpha) {
+  background-color: transparentize($color, 1-$alpha);
+}
