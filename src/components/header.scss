@@ -2,19 +2,26 @@
 
 #navbar {
   padding-top: 20px;
-  height: 100px;
-  background: transparent;
+  height: 90px;
+  background-color: map_get($colors, "purple-bunting");
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 
+  &.transparent {
+    background-color: transparent;
+  }
+
   #navbar-items {
+    a {
+      color: map-get($colors, "white");
+      text-decoration: none;
+    }
+
     #navbar-brand {
       a {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         font-weight: 400;
-        color: map-get($colors, "white");
-        text-decoration: none;
       }
     }
   }

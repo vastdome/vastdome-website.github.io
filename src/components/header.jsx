@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
+import classnames from 'classnames';
 import {
   Alignment,
   Button,
@@ -10,7 +11,16 @@ import {
 import './header.scss';
 
 const Header = ({ siteTitle }) => (
-  <Navbar id="navbar" className="pt-dark">
+  <Navbar
+    id="navbar"
+    className={(() => {
+      const cls = ['pt-dark'];
+      if (window.location.pathname === '/') {
+        cls.push('transparent');
+      }
+      return classnames(cls);
+    })()}
+  >
     <div id="navbar-items" className="container">
       <NavbarGroup id="navbar-brand" align={Alignment.LEFT}>
         <NavbarHeading>
@@ -18,10 +28,24 @@ const Header = ({ siteTitle }) => (
         </NavbarHeading>
       </NavbarGroup>
       <NavbarGroup align={Alignment.RIGHT}>
-        <Button className="pt-minimal pt-ui-text" icon="properties" text="Features" />
+        <Link to="/#features">
+          <Button
+            className="pt-minimal pt-ui-text"
+            icon="properties"
+            text="Features"
+            active={(window.location.pathname + window.location.hash).startsWith('/#features')}
+          />
+        </Link>
         <Button className="pt-minimal pt-ui-text" icon="document" text="Docs" />
         <Button className="pt-minimal pt-ui-text" icon="download" text="Download" />
-        <Button className="pt-minimal pt-ui-text" icon="info-sign" text="About" />
+        <Link to="/about/">
+          <Button
+            className="pt-minimal pt-ui-text"
+            icon="info-sign"
+            text="About"
+            active={(window.location.pathname + window.location.hash).startsWith('/about/')}
+          />
+        </Link>
       </NavbarGroup>
     </div>
   </Navbar>
