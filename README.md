@@ -1,4 +1,4 @@
-# vastdome.github.io
+# vastdome.io
 
 ### Install project dependencies
 
