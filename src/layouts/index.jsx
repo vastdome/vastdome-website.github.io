@@ -2,10 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
+import Header from '../components/header';
+
+import '../../node_modules/normalize.css/normalize.css';
 import '../../node_modules/@blueprintjs/core/lib/css/blueprint.css';
 import '../../node_modules/@blueprintjs/icons/lib/css/blueprint-icons.css';
 
-import Header from '../components/header';
+import '../styles/index.scss';
 
 const Layout = ({ children, data }) => (
   <div>
@@ -14,7 +17,6 @@ const Layout = ({ children, data }) => (
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
-        { name: 'build-time', content: data.site.buildTime },
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />

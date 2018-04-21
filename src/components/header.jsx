@@ -4,21 +4,27 @@ import Link from 'gatsby-link';
 import {
   Alignment,
   Button,
-  Navbar, NavbarGroup, NavbarHeading, NavbarDivider,
+  Navbar, NavbarGroup, NavbarHeading,
 } from '@blueprintjs/core';
 
+import './header.scss';
+
 const Header = ({ siteTitle }) => (
-  <div>
-    <Navbar>
-      <NavbarGroup align={Alignment.LEFT}>
-        <NavbarHeading>Blueprint</NavbarHeading>
-        <NavbarDivider />
-        <Button className="pt-minimal" icon="home" text="Home" />
-        <Button className="pt-minimal" icon="document" text="Files" />
+  <Navbar id="navbar" className="pt-dark">
+    <div id="navbar-items" className="container">
+      <NavbarGroup id="navbar-brand" align={Alignment.LEFT}>
+        <NavbarHeading>
+          <Link to="/">{siteTitle}</Link>
+        </NavbarHeading>
       </NavbarGroup>
-    </Navbar>
-    <Link to="/">{siteTitle}</Link>
-  </div>
+      <NavbarGroup align={Alignment.RIGHT}>
+        <Button className="pt-minimal pt-ui-text" icon="properties" text="Features" />
+        <Button className="pt-minimal pt-ui-text" icon="document" text="Docs" />
+        <Button className="pt-minimal pt-ui-text" icon="download" text="Download" />
+        <Button className="pt-minimal pt-ui-text" icon="info-sign" text="About" />
+      </NavbarGroup>
+    </div>
+  </Navbar>
 );
 
 Header.propTypes = {
