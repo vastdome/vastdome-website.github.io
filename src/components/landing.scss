@@ -1,0 +1,56 @@
+@import "../styles/color";
+
+#landing {
+  margin-top: -90px;
+  width: 100%;
+  background-color: map_get($colors, "purple-mirage");
+
+  .landing-particles {
+    z-index: -1000;
+
+    canvas {
+      margin-top: -80px;
+    }
+  }
+
+  .landing-text {
+    width: 100%;
+
+    h1, strong, p {
+      text-align: center;
+      color: map_get($colors, "grey-platinum")
+    }
+
+    .title {
+      text-transform: uppercase;
+    }
+
+    .divider {
+      display: block;
+      width: 100px;
+      height: 4px;
+      margin: 30px auto 0 auto;
+      border-radius: 3px;
+      background: map_get($colors, "purple-wine");
+    }
+
+    .intro {
+      margin: 30px auto 0 auto;
+      width: 50%;
+      font-size: 1.2rem;
+    }
+
+    .actions {
+      width: 100%;
+      margin: 50px auto 0 auto;
+      text-align: center;
+
+      button {
+        border-radius: 30px;
+        border: solid map_get($colors, "grey-iron");
+        padding: 12px 30px;
+        color: map_get($colors, "grey-moon")
+      }
+    }
+  }
+}
