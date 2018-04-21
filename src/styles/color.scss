@@ -1,0 +1,31 @@
+$colors: (
+  "white": #ffffff,
+  "black": #000000,
+
+  "grey-moon":     #fafbfc,
+  "grey-smoke":    #f7f7f7,
+  "grey-platinum": #e4e4e4,
+  "grey-iron":     #cacaca,
+  "grey-ghost":    #b0b0b0,
+  "grey":          #a3a3a3,
+  "grey-shady":    #8c8c8c,
+  "grey-storm":    #737373,
+  "grey-stone":    #363d48,
+  "grey-russia":   #23282e,
+  "grey-mine":     #333333,
+  "grey-shadow":   #1a1a1a,
+
+  "purple-wine":    #585878,
+  "purple-bunting": #303046,
+  "purple-mirage":  #1b1c31,
+);
+
+// generate colors
+@each $color-name, $color-value in $colors {
+  .color-#{$color-name} {
+    color: $color-value;
+  }
+  .color-#{$color-name}-back {
+    background-color: $color-value;
+  }
+}

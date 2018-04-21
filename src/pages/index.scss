@@ -1,0 +1,133 @@
+@import "../styles/color";
+
+#welcome {
+  .features {
+    h1 {
+      color: map_get($colors, "grey-stone");
+      text-align: center;
+    }
+
+    .feature {
+      display: inline-block;
+      width: 50%;
+      text-align: center;
+
+      h3 {
+        margin: 20px 0 10px 0;
+        line-height: 25px;
+        padding: 0;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: map_get($colors, "purple-bunting");
+      }
+
+      p {
+        color: map_get($colors, "grey-storm");
+      }
+
+      .illustrate {
+        width: 400px;
+        height: 250px;
+        margin: auto;
+        background-color: map_get($colors, "grey-iron");
+      }
+    }
+  }
+
+  .works {
+    h1 {
+      color: map_get($colors, "grey-stone");
+      text-align: center;
+    }
+
+    .work {
+      width: 90%;
+      height: 150px;
+      margin: 20px auto;
+      text-align: center;
+
+      p {
+        display: inline-block;
+        width: 60%;
+        height: 150px;
+        margin-top: 35px;
+        vertical-align: top;
+        font-size: 1.1rem;
+        color: map_get($colors, "grey-storm");
+      }
+
+      .illustrate {
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+        margin-right: 40px;
+        background-color: map_get($colors, "grey-iron");
+      }
+    }
+  }
+
+  .downloads {
+    height: 400px;
+    padding: 60px 30px;
+    background-color: map_get($colors, "purple-bunting");
+
+    .content {
+      .left {
+        display: inline-block;
+        width: 60%;
+        color: map_get($colors, "white");
+        font-size: 1rem;
+        font-weight: 300;
+
+        h1 {
+          color: map_get($colors, "white");
+          font-size: 1.7rem;
+          font-weight: 300;
+        }
+      }
+
+      .right {
+        display: inline-block;
+        float: right;
+
+        .illustrate {
+          width: 300px;
+          height: 200px;
+          margin: 10px 20px;
+          background-color: map_get($colors, "grey-iron");
+        }
+      }
+    }
+  }
+
+  .starts {
+    text-align: center;
+
+    h1 {
+      color: map_get($colors, "grey-stone");
+      text-align: center;
+    }
+
+    .start-buttons {
+      margin: 50px auto 30px auto;
+
+      button {
+        width: 200px;
+        height: 30px;
+        border-radius: 30px;
+        margin: 0 20px;
+
+        border: solid map_get($colors, "grey-storm");
+      }
+    }
+  }
+
+  .divider {
+    display: block;
+    width: 70px;
+    height: 4px;
+    margin: 30px auto 0 auto;
+    border-radius: 3px;
+    background: map_get($colors, "purple-wine");
+  }
+}
