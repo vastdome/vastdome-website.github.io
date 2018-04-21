@@ -21,12 +21,23 @@ class Header extends React.Component {
   }
 
   componentDidMount() {
-    (() => {
+    this.updateCurrentPath();
+  }
+
+  componentDidUpdate() {
+    this.updateCurrentPath();
+  }
+
+  updateCurrentPath() {
+    if (
+      this.state.currentPath !== window.location.pathname ||
+      this.state.currentFullPath !== window.location.pathname + window.location.hash
+    ) {
       this.setState({
         currentPath: window.location.pathname,
         currentFullPath: window.location.pathname + window.location.hash,
       });
-    })();
+    }
   }
 
   render() {
