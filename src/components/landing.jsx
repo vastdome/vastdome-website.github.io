@@ -8,7 +8,7 @@ class Landing extends React.Component {
   constructor() {
     super();
 
-    this.state = { landingHeight: 0 };
+    this.state = { landingHeight: 1000 };
   }
 
   componentDidMount() {
