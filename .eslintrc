@@ -1,6 +1,8 @@
 {
   "extends": "airbnb",
   "globals": {
+    "document": false,
+    "window": false,
     "graphql": false
   },
   "rules": {
