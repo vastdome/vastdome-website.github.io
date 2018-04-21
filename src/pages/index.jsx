@@ -6,7 +6,7 @@ import Landing from '../components/landing';
 import './index.scss';
 
 const FeaturesSection = () => (
-  <div className="features container section">
+  <div id="features" className="features container section">
     <div className="space size-2" />
     <h1>Features</h1>
     <div className="space size-2" />
