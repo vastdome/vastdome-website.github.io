@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import Header from '../components/header';
+import Footer from '../components/footer';
 
 import '../../node_modules/normalize.css/normalize.css';
 import '../../node_modules/@blueprintjs/core/lib/css/blueprint.css';
@@ -23,6 +24,7 @@ const Layout = ({ children, data }) => (
     <div>
       {children()}
     </div>
+    <Footer />
   </div>
 );
 
