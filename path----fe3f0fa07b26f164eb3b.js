@@ -1,0 +1,2 @@
+webpackJsonp([60335399758886],{170:function(t,e){t.exports={data:{site:{siteMetadata:{title:"Vastdome"},buildTime:"2018-04-21T12:50:28.036Z"}},layoutContext:{}}}});
+//# sourceMappingURL=path----fe3f0fa07b26f164eb3b.js.map
