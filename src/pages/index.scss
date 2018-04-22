@@ -10,6 +10,8 @@
     .feature {
       display: inline-block;
       width: 50%;
+      margin-top: 20px;
+      margin-bottom: 30px;
       text-align: center;
 
       h3 {
@@ -27,9 +29,12 @@
 
       .illustrate {
         width: 400px;
-        height: 250px;
+        height: 300px;
         margin: auto;
-        background-color: map_get($colors, "grey-iron");
+        background-size: 400px 300px;
+        border: 3px solid map_get($colors, "grey-stone");
+        border-radius: 3px;
+        opacity: 0.9;
       }
     }
   }
@@ -68,7 +73,7 @@
 
   .downloads {
     height: 400px;
-    padding: 60px 30px;
+    padding: 50px 30px;
     background-color: map_get($colors, "purple-bunting");
 
     .content {
@@ -100,7 +105,7 @@
     }
   }
 
-  .starts {
+  .contacts {
     text-align: center;
 
     h1 {
@@ -108,7 +113,7 @@
       text-align: center;
     }
 
-    .start-buttons {
+    .contact-buttons {
       margin: 50px auto 30px auto;
 
       button {

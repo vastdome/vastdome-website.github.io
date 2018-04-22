@@ -5,81 +5,114 @@ import Landing from '../components/landing';
 
 import './index.scss';
 
+import imageFeaturesSimple from './index/features-simple.min.jpg';
+import imageFeaturesApplication from './index/features-application.min.jpg';
+import imageFeaturesGear from './index/features-gear.min.jpg';
+import imageFeaturesCloud from './index/features-cloud.min.jpg';
+
 const FeaturesSection = () => (
   <div id="features" className="features container section">
     <div className="space size-2" />
     <h1>Features</h1>
     <div className="space size-2" />
     <div className="feature">
-      <div className="illustrate" />
-      <h3>BlockChain Templates</h3>
-      <p>Create a New BlockChain as soon as possible.</p>
+      <div
+        className="illustrate"
+        style={{
+          backgroundImage: `url('${imageFeaturesSimple}')`,
+        }}
+      />
+      <h3>Make Blockchain Simple</h3>
     </div>
     <div className="feature">
-      <div className="illustrate" />
-      <h3>DApp and TApp Market Place</h3>
-      <p>Find DApp and TApp</p>
+      <div
+        className="illustrate"
+        style={{
+          backgroundImage: `url('${imageFeaturesApplication}')`,
+        }}
+      />
+      <h3>Application Oriented Design</h3>
     </div>
     <div className="feature">
-      <div className="illustrate" />
-      <h3>Delegate Market</h3>
-      <p>Find Delegate to run your BlockChain.</p>
+      <div
+        className="illustrate"
+        style={{
+          backgroundImage: `url('${imageFeaturesGear}')`,
+        }}
+      />
+      <h3>Embrace Existing Ecology</h3>
     </div>
     <div className="feature">
-      <div className="illustrate" />
-      <h3>NCOS</h3>
-      <p>Nuclear Cluster Operation System.</p>
+      <div
+        className="illustrate"
+        style={{
+          backgroundImage: `url('${imageFeaturesCloud}')`,
+        }}
+      />
+      <h3>Autonomous Cloud with Token Economy</h3>
     </div>
     <div className="space size-2" />
   </div>
 );
 
 const WorksSection = () => (
-  <div className="works container section">
+  <div id="about" className="works container section">
     <div className="space size-3" />
     <h1>Here&apos;s how Vastdome works</h1>
     <div className="space size-2" />
     <div className="work">
       <div className="illustrate" />
       <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry standard dummy text ever since the 1500s.
+        Standalone Blockchain for Each Application
       </p>
     </div>
     <div className="work">
       <div className="illustrate" />
       <p>
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page when looking at its layout.
-      </p>
-    </div>
-    <div className="work">
-      <div className="illustrate" />
-      <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
-        It has roots in a piece of classical Latin literature from 45 BC, making
-        it over 2000 years old.
+        Application Blockchain Development Kit
       </p>
     </div>
     <div className="work">
       <div className="illustrate" />
       <p>
-        There are many variations of passages of Lorem Ipsum available, but
-        the majority have suffered alteration in some form, by injected humour.
+        Scalable Blockchain Node
       </p>
     </div>
     <div className="work">
       <div className="illustrate" />
       <p>
-        All the Lorem Ipsum generators on the Internet tend to repeat predefined
-        chunks as necessary, making this the first true generator on the
-        Internet. It uses a dictionary of over 200 Latin words.
+        Off-chain Services
+      </p>
+    </div>
+    <div className="work">
+      <div className="illustrate" />
+      <p>
+        Blockchain Services
+      </p>
+    </div>
+    <div className="work">
+      <div className="illustrate" />
+      <p>
+        Compatible with Existing Public Blockchains
+      </p>
+    </div>
+    <div className="work">
+      <div className="illustrate" />
+      <p>
+        Delegate Market
+      </p>
+    </div>
+    <div className="work">
+      <div className="illustrate" />
+      <p>
+        Application Market
       </p>
     </div>
   </div>
 );
 
 const DownloadSection = () => (
-  <div className="downloads">
+  <div id="download" className="downloads">
     <div className="content container section">
       <div className="left">
         <h1>Get the Vastdome Wallet</h1>
@@ -100,9 +133,9 @@ const DownloadSection = () => (
 );
 
 const StartSection = () => (
-  <div className="starts container section">
+  <div id="contact" className="contacts container section">
     <h1>Ready to build on Vastdome?</h1>
-    <ButtonGroup className="start-buttons">
+    <ButtonGroup className="contact-buttons">
       <Button className="pt-minimal pt-large" icon="tick" text="Getting Started" />
       <Button className="pt-minimal pt-large" icon="layout-grid" text="Learn more" />
     </ButtonGroup>
