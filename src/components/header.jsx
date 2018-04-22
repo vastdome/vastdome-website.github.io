@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
+import Scrollchor from 'react-scrollchor';
 import classnames from 'classnames';
 import {
   Alignment,
@@ -119,7 +120,7 @@ class Header extends React.Component {
   render() {
     const links = (
       <ButtonGroup className="pt-dark">
-        <Link to="/#features">
+        <Scrollchor to="#features">
           <Button
             className="pt-minimal pt-ui-text"
             icon="properties"
@@ -127,8 +128,8 @@ class Header extends React.Component {
             active={this.state.currentFullPath.startsWith('/#features')}
             onClick={this.closeBurgerMenu}
           />
-        </Link>
-        <Link to="/#about">
+        </Scrollchor>
+        <Scrollchor to="#about">
           <Button
             className="pt-minimal pt-ui-text"
             icon="info-sign"
@@ -136,23 +137,23 @@ class Header extends React.Component {
             active={this.state.currentFullPath.startsWith('/about/')}
             onClick={this.closeBurgerMenu}
           />
-        </Link>
-        <Link to="/#download">
+        </Scrollchor>
+        <Scrollchor to="#download">
           <Button
             className="pt-minimal pt-ui-text"
             icon="download"
             text="Download"
             onClick={this.closeBurgerMenu}
           />
-        </Link>
-        <Link to="/#contact">
+        </Scrollchor>
+        <Scrollchor to="#contact">
           <Button
             className="pt-minimal pt-ui-text"
             icon="chat"
             text="Contact"
             onClick={this.closeBurgerMenu}
           />
-        </Link>
+        </Scrollchor>
       </ButtonGroup>
     );
 

@@ -21,6 +21,7 @@
     "react-dom": "^16.3.2",
     "react-helmet": "^5.2.0",
     "react-particles-js": "^2.1.2",
+    "react-scrollchor": "^5.0.1",
     "react-transition-group": "^2.3.1"
   },
   "license": "GPL-3.0",
