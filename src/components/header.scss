@@ -1,28 +1,140 @@
 @import "../styles/color";
 
+#navbar-floor {
+  width: 100%;
+  height: 90px;
+}
+
 #navbar {
+  position: fixed;
   padding-top: 20px;
+  width: 100%;
   height: 90px;
   background-color: map_get($colors, "purple-bunting");
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+  -webkit-transition: height 0.3s ease-out, padding-top 0.3s ease-out;
+  -moz-transition: height 0.3s ease-out, padding-top 0.3s ease-out;
+  -ms-transition: height 0.3s ease-out, padding-top 0.3s ease-out;
+  -o-transition: height 0.3s ease-out, padding-top 0.3s ease-out;
+  transition: height 0.3s ease-out, padding-top 0.3s ease-out;
+
+  &.smaller {
+    padding-top: 5px;
+    height: 60px;
+  }
 
   &.transparent {
     background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
   }
 
-  #navbar-items {
+  a {
+    color: map-get($colors, "white");
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  button {
+    outline: none !important;
+  }
+
+  #navbar-brand {
     a {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
+}
+
+#navbar-burger {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  #navbar {
+    #navbar-items {
+      display: none;
+    }
+  }
+
+  #navbar-burger {
+    display: block;
+
+    a {
+      display: block;
+      width: 100%;
       color: map-get($colors, "white");
       text-decoration: none;
+      margin: 10px 0 20px 10px;
     }
 
-    #navbar-brand {
-      a {
-        font-size: 1.5rem;
-        font-weight: 400;
+    button {
+      outline: none !important;
+      font-size: 1rem;
+    }
+
+    .pt-button-group {
+      width: 100%;
+      display: block;
+    }
+
+    .bm-burger-button {
+      position: fixed;
+      width: 30px;
+      height: 30px;
+      top: 30px;
+      right: 8%;
+      padding: 5px;
+      border-radius: 3px;
+      color: map-get($colors, "white");
+      -webkit-transition: top 0.3s ease-out;
+      -moz-transition: top 0.3s ease-out;
+      -ms-transition: top 0.3s ease-out;
+      -o-transition: top 0.3s ease-out;
+      transition: top 0.3s ease-out;
+
+      &.smaller {
+        top: 17px;
       }
+
+      &:hover {
+        background: map-get($colors, "grey-storm");
+      }
+    }
+
+    .bm-burger-bars {
+      background: map-get($colors, "white");
+    }
+
+    /* Position and sizing of clickable cross button */
+    .bm-cross-button {
+      height: 24px;
+      width: 24px;
+    }
+
+    .bm-cross {
+      background: #bdc3c7;
+    }
+
+    .bm-menu {
+      background: map-get($colors, "purple-mirage");
+      padding: 2.5em 1.5em 0;
+      font-size: 1.15em;
+    }
+
+    .bm-morph-shape {
+      fill: #373a47;
+    }
+
+    .bm-item-list {
+      color: #b8b7ad;
+      padding: 0.8em;
+    }
+
+    .bm-overlay {
+      background: rgba(0, 0, 0, 0.3);
     }
   }
 }
