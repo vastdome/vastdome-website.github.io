@@ -1,6 +1,6 @@
 import React from 'react';
 import Particles from 'react-particles-js';
-import { Button, ButtonGroup } from '@blueprintjs/core';
+import { Button, ButtonGroup, Icon } from '@blueprintjs/core';
 
 import './landing.scss';
 
@@ -90,7 +90,7 @@ class Landing extends React.Component {
           className="landing-text"
           style={{
             marginTop: -this.state.landingHeight + 20,
-            paddingTop: this.state.landingHeight * 0.27,
+            paddingTop: this.state.landingHeight * 0.35,
           }}
         >
           <h1 className="title">
@@ -105,8 +105,11 @@ class Landing extends React.Component {
           </p>
           <div className="actions">
             <ButtonGroup>
-              <Button className="pt-minimal" large text="Read the whitepaper" />
+              <Button className="pt-minimal" large text="Learn more" />
             </ButtonGroup>
+          </div>
+          <div className="down-indicator">
+            <Icon icon="chevron-down" iconSize={20} />
           </div>
         </div>
       </div>
