@@ -50,7 +50,7 @@ const FeaturesSection = () => {
       <div className="space size-2" />
       {
         _.map(features, feature => (
-          <div className="feature">
+          <div key={feature.title} className="feature">
             <div
               className="illustrate"
               style={{
@@ -98,7 +98,7 @@ const DetailsSection = () => {
       <div className="space size-2" />
       {
         _.map(details, detail => (
-          <div className="detail">
+          <div key={detail.text} className="detail">
             <div
               className="illustrate"
               style={{
@@ -175,6 +175,7 @@ const StartSection = () => {
         {
           _.map(contacts, contact => (
             <Button
+              key={contact.name}
               className="pt-minimal pt-large contact-button"
               icon={<div className="icon" style={{ backgroundImage: `url("${contact.icon}")` }} />}
               text={contact.name}
