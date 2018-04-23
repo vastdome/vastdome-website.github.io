@@ -129,12 +129,12 @@ class Header extends React.Component {
             onClick={this.closeBurgerMenu}
           />
         </Scrollchor>
-        <Scrollchor to="#about">
+        <Scrollchor to="#details">
           <Button
             className="pt-minimal pt-ui-text"
             icon="info-sign"
             text="About"
-            active={this.state.currentFullPath.startsWith('/about/')}
+            active={this.state.currentFullPath.startsWith('/#detail')}
             onClick={this.closeBurgerMenu}
           />
         </Scrollchor>
@@ -143,6 +143,7 @@ class Header extends React.Component {
             className="pt-minimal pt-ui-text"
             icon="download"
             text="Download"
+            active={this.state.currentFullPath.startsWith('/#download')}
             onClick={this.closeBurgerMenu}
           />
         </Scrollchor>
@@ -151,6 +152,7 @@ class Header extends React.Component {
             className="pt-minimal pt-ui-text"
             icon="chat"
             text="Contact"
+            active={this.state.currentFullPath.startsWith('/#contact')}
             onClick={this.closeBurgerMenu}
           />
         </Scrollchor>

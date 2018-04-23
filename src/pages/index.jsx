@@ -1,5 +1,8 @@
 import React from 'react';
-import { Button, ButtonGroup } from '@blueprintjs/core';
+import {
+  Button, ButtonGroup,
+  Tooltip, Position,
+} from '@blueprintjs/core';
 
 import Landing from '../components/landing';
 
@@ -10,16 +13,30 @@ import imageFeaturesApplication from './index/features-application.min.jpg';
 import imageFeaturesGear from './index/features-gear.min.jpg';
 import imageFeaturesCloud from './index/features-cloud.min.jpg';
 
+import detailsLayers from './index/details-layers.svg';
+import detailsWand from './index/details-wand.svg';
+import detailsNetwork from './index/details-network.svg';
+import detailsShapes from './index/details-shapes.svg';
+import detailsLegoBlock from './index/details-lego-block.svg';
+import detailsPlug from './index/details-plug.svg';
+import detailsBuilding from './index/details-building.svg';
+import detailsShoppingCart from './index/details-shopping-cart.svg';
+
+import downloadPapers from './index/download-papers.min.png';
+
+import contactGitHub from './index/contact-github-dark.png';
+import contactTwitter from './index/contact-twitter-dark.png';
+import contactEmail from './index/contact-email-dark.png';
+
 const FeaturesSection = () => (
-  <div id="features" className="features container section">
-    <div className="space size-2" />
+  <div className="features container section">
     <h1>Features</h1>
     <div className="space size-2" />
     <div className="feature">
       <div
         className="illustrate"
         style={{
-          backgroundImage: `url('${imageFeaturesSimple}')`,
+          backgroundImage: `url("${imageFeaturesSimple}")`,
         }}
       />
       <h3>Make Blockchain Simple</h3>
@@ -28,7 +45,7 @@ const FeaturesSection = () => (
       <div
         className="illustrate"
         style={{
-          backgroundImage: `url('${imageFeaturesApplication}')`,
+          backgroundImage: `url("${imageFeaturesApplication}")`,
         }}
       />
       <h3>Application Oriented Design</h3>
@@ -37,7 +54,7 @@ const FeaturesSection = () => (
       <div
         className="illustrate"
         style={{
-          backgroundImage: `url('${imageFeaturesGear}')`,
+          backgroundImage: `url("${imageFeaturesGear}")`,
         }}
       />
       <h3>Embrace Existing Ecology</h3>
@@ -46,98 +63,142 @@ const FeaturesSection = () => (
       <div
         className="illustrate"
         style={{
-          backgroundImage: `url('${imageFeaturesCloud}')`,
+          backgroundImage: `url("${imageFeaturesCloud}")`,
         }}
       />
       <h3>Autonomous Cloud with Token Economy</h3>
     </div>
-    <div className="space size-2" />
   </div>
 );
 
-const WorksSection = () => (
-  <div id="about" className="works container section">
-    <div className="space size-3" />
+const DetailsSection = () => (
+  <div className="details container section">
     <h1>Here&apos;s how Vastdome works</h1>
     <div className="space size-2" />
-    <div className="work">
-      <div className="illustrate" />
-      <p>
-        Standalone Blockchain for Each Application
-      </p>
+    <div className="detail">
+      <div
+        className="illustrate"
+        style={{
+          backgroundImage: `url("${detailsLayers}")`,
+        }}
+      />
+      <p>Standalone Blockchain for Each Application</p>
     </div>
-    <div className="work">
-      <div className="illustrate" />
-      <p>
-        Application Blockchain Development Kit
-      </p>
+    <div className="detail">
+      <div
+        className="illustrate"
+        style={{
+          backgroundImage: `url("${detailsWand}")`,
+        }}
+      />
+      <p>Application Blockchain Development Kit</p>
     </div>
-    <div className="work">
-      <div className="illustrate" />
-      <p>
-        Scalable Blockchain Node
-      </p>
+    <div className="detail">
+      <div
+        className="illustrate"
+        style={{
+          backgroundImage: `url("${detailsNetwork}")`,
+        }}
+      />
+      <p>Scalable Blockchain Node</p>
     </div>
-    <div className="work">
-      <div className="illustrate" />
-      <p>
-        Off-chain Services
-      </p>
+    <div className="detail">
+      <div
+        className="illustrate"
+        style={{
+          backgroundImage: `url("${detailsShapes}")`,
+        }}
+      />
+      <p>Off-chain Services</p>
     </div>
-    <div className="work">
-      <div className="illustrate" />
-      <p>
-        Blockchain Services
-      </p>
+    <div className="detail">
+      <div
+        className="illustrate"
+        style={{
+          backgroundImage: `url("${detailsLegoBlock}")`,
+        }}
+      />
+      <p>Blockchain Services</p>
     </div>
-    <div className="work">
-      <div className="illustrate" />
-      <p>
-        Compatible with Existing Public Blockchains
-      </p>
+    <div className="detail">
+      <div
+        className="illustrate"
+        style={{
+          backgroundImage: `url("${detailsPlug}")`,
+        }}
+      />
+      <p>Compatible with Existing Public Blockchains</p>
     </div>
-    <div className="work">
-      <div className="illustrate" />
-      <p>
-        Delegate Market
-      </p>
+    <div className="detail">
+      <div
+        className="illustrate"
+        style={{
+          backgroundImage: `url("${detailsBuilding}")`,
+        }}
+      />
+      <p>Delegate Market</p>
     </div>
-    <div className="work">
-      <div className="illustrate" />
-      <p>
-        Application Market
-      </p>
+    <div className="detail">
+      <div
+        className="illustrate"
+        style={{
+          backgroundImage: `url("${detailsShoppingCart}")`,
+        }}
+      />
+      <p>Application Market</p>
     </div>
   </div>
 );
 
 const DownloadSection = () => (
-  <div id="download" className="downloads">
+  <div className="downloads">
     <div className="content container section">
       <div className="left">
-        <h1>Get the Vastdome Wallet</h1>
+        <h1>Download Documents</h1>
         <div className="space size-2" />
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Aldus PageMaker including versions of Lorem Ipsum.
-          Aldus PageMaker including versions of Lorem Ipsum.
+          Read the whitepaper and business plan for a deeper understanding about Vastdome
+          from the perspective of internal principles and future blueprints.
         </p>
         <div className="space size-2" />
-        <Button icon="download" text="Download Latest Version" />
+        <Tooltip className="pt-dark tip" content="Coming soon..." position={Position.TOP}>
+          <Button className="pt-intent-primary" icon="download" text="Download Whitepaper" />
+        </Tooltip>
+        <Tooltip className="pt-dark tip" content="Coming soon..." position={Position.TOP}>
+          <Button className="pt-intent-primary" icon="download" text="Download Business Plan" />
+        </Tooltip>
       </div>
       <div className="right">
-        <div className="illustrate" />
+        <div
+          className="illustrate"
+          style={{
+            backgroundImage: `url("${downloadPapers}")`,
+          }}
+        />
       </div>
     </div>
   </div>
 );
 
 const StartSection = () => (
-  <div id="contact" className="contacts container section">
-    <h1>Ready to build on Vastdome?</h1>
+  <div className="contacts container section">
+    <h1>Contact Us</h1>
     <ButtonGroup className="contact-buttons">
-      <Button className="pt-minimal pt-large" icon="tick" text="Getting Started" />
-      <Button className="pt-minimal pt-large" icon="layout-grid" text="Learn more" />
+      <Button
+        className="pt-minimal pt-large"
+        icon={<div className="icon" style={{ backgroundImage: `url("${contactGitHub}")` }} />}
+        text="GitHub"
+      />
+      <Button
+        className="pt-minimal pt-large"
+        icon={<div className="icon" style={{ backgroundImage: `url("${contactTwitter}")` }} />}
+        text="Twitter"
+      />
+      <Button
+        className="pt-minimal pt-large"
+        icon={<div className="icon" style={{ backgroundImage: `url("${contactEmail}")` }} />}
+        text="Email"
+      />
     </ButtonGroup>
   </div>
 );
@@ -146,15 +207,26 @@ const IndexPage = () => (
   <div>
     <Landing />
     <div id="welcome">
-      <div className="space size-2" />
-      <FeaturesSection />
+      <div id="features" >
+        <div className="space size-2" />
+        <FeaturesSection />
+      </div>
       <div className="divider" />
-      <WorksSection />
-      <div className="space size-3" />
-      <DownloadSection />
-      <div className="space size-3" />
-      <StartSection />
-      <div className="space size-2" />
+      <div id="details" >
+        <div className="space size-3" />
+        <DetailsSection />
+      </div>
+      <div id="download">
+        <div className="space size-2" />
+        <DownloadSection />
+      </div>
+      <div id="contact">
+        <div className="space size-3" />
+        <div className="space size-2" />
+        <StartSection />
+        <div className="space size-3" />
+        <div className="space size-2" />
+      </div>
     </div>
   </div>
 );

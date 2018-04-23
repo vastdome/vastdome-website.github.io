@@ -54,10 +54,10 @@
     }
 
     .down-indicator {
-      margin-top:120px;
+      margin-top: 150px;
       color: map_get($colors, "grey-ghost");
       text-align: center;
-      animation: blinker 5s linear infinite;
+      animation: blinker 3s linear infinite;
     }
 
     @keyframes blinker {

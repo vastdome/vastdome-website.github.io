@@ -98,10 +98,10 @@ class Landing extends React.Component {
           </h1>
           <span className="divider" />
           <p className="intro">
-            Nuclear tokenizes the hardware resources provided by various
-            3rd-parties and software services from either Nuclear or
+            Vastdome tokenizes the hardware resources provided by various
+            3rd-parties and software services from either Vastdome or
             3rd-parties, to be the 1st DECENTRALIZED CLOUD for both
-            decentralized and traditional applications
+            decentralized and traditional applications.
           </p>
           <div className="actions">
             <ButtonGroup>
