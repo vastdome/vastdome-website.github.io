@@ -1,6 +1,7 @@
 import React from 'react';
 import Particles from 'react-particles-js';
 import { Button, ButtonGroup, Icon } from '@blueprintjs/core';
+import Scrollchor from 'react-scrollchor';
 
 import './landing.scss';
 
@@ -136,7 +137,9 @@ class Landing extends React.Component {
           </p>
           <div className="actions">
             <ButtonGroup>
-              <Button className="pt-minimal" large text="Learn more" />
+              <Scrollchor to="#features">
+                <Button className="pt-minimal" large text="Learn more" />
+              </Scrollchor>
             </ButtonGroup>
           </div>
           <div className="down-indicator">
