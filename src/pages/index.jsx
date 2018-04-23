@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import {
   Button, ButtonGroup,
@@ -13,158 +14,106 @@ import imageFeaturesApplication from './index/features-application.min.jpg';
 import imageFeaturesGear from './index/features-gear.min.jpg';
 import imageFeaturesCloud from './index/features-cloud.min.jpg';
 
-import detailsLayers from './index/details-layers.svg';
-import detailsWand from './index/details-wand.svg';
-import detailsNetwork from './index/details-network.svg';
-import detailsShapes from './index/details-shapes.svg';
-import detailsLegoBlock from './index/details-lego-block.svg';
-import detailsPlug from './index/details-plug.svg';
-import detailsBuilding from './index/details-building.svg';
-import detailsShoppingCart from './index/details-shopping-cart.svg';
+import imageDetailsLayers from './index/details-layers.svg';
+import imageDetailsWand from './index/details-wand.svg';
+import imageDetailsNetwork from './index/details-network.svg';
+import imageDetailsShapes from './index/details-shapes.svg';
+import imageDetailsLegoBlock from './index/details-lego-block.svg';
+import imageDetailsPlug from './index/details-plug.svg';
+import imageDetailsBuilding from './index/details-building.svg';
+import imageDetailsShoppingCart from './index/details-shopping-cart.svg';
 
-import downloadPapers from './index/download-papers.min.png';
+import imageDownloadPapers from './index/download-papers.min.png';
 
-import contactGitHub from './index/contact-github-dark.png';
-import contactTwitter from './index/contact-twitter-dark.png';
-import contactEmail from './index/contact-email-dark.png';
+import imageContactGitHub from './index/contact-github-dark.png';
+import imageContactTwitter from './index/contact-twitter-dark.png';
+import imageContactEmail from './index/contact-email-dark.png';
 
-const FeaturesSection = () => (
-  <div className="features container section">
-    <h1>Features</h1>
-    <div className="space size-2" />
-    <div className="feature">
-      <div
-        className="illustrate"
-        style={{
-          backgroundImage: `url("${imageFeaturesSimple}")`,
-        }}
-      />
-      <h3>Make Blockchain Simple</h3>
-    </div>
-    <div className="feature">
-      <div
-        className="illustrate"
-        style={{
-          backgroundImage: `url("${imageFeaturesApplication}")`,
-        }}
-      />
-      <h3>Application Oriented Design</h3>
-    </div>
-    <div className="feature">
-      <div
-        className="illustrate"
-        style={{
-          backgroundImage: `url("${imageFeaturesGear}")`,
-        }}
-      />
-      <h3>Embrace Existing Ecology</h3>
-    </div>
-    <div className="feature">
-      <div
-        className="illustrate"
-        style={{
-          backgroundImage: `url("${imageFeaturesCloud}")`,
-        }}
-      />
-      <h3>Autonomous Cloud with Token Economy</h3>
-    </div>
-  </div>
-);
+const FeaturesSection = () => {
+  const features = [{
+    title: 'Make Blockchain Simple',
+    image: imageFeaturesSimple,
+  }, {
+    title: 'Application Oriented Design',
+    image: imageFeaturesApplication,
+  }, {
+    title: 'Embrace Existing Ecology',
+    image: imageFeaturesGear,
+  }, {
+    title: 'Autonomous Cloud with Token Economy',
+    image: imageFeaturesCloud,
+  }];
 
-const DetailsSection = () => (
-  <div className="details container section">
-    <h1>Here&apos;s how Vastdome works</h1>
-    <div className="space size-2" />
-    <div className="detail">
-      <div
-        className="illustrate"
-        style={{
-          backgroundImage: `url("${detailsLayers}")`,
-        }}
-      />
-      <div className="text">
-        <p>Standalone Blockchain for Each Application</p>
-      </div>
+  return (
+    <div className="features container section">
+      <h1>Features</h1>
+      <div className="space size-2" />
+      {
+        _.map(features, feature => (
+          <div className="feature">
+            <div
+              className="illustrate"
+              style={{
+                backgroundImage: `url("${feature.image}")`,
+              }}
+            />
+            <h3>{feature.title}</h3>
+          </div>
+        ))
+      }
     </div>
-    <div className="detail">
-      <div
-        className="illustrate"
-        style={{
-          backgroundImage: `url("${detailsWand}")`,
-        }}
-      />
-      <div className="text">
-        <p>Application Blockchain Development Kit</p>
-      </div>
+  );
+};
+
+const DetailsSection = () => {
+  const details = [{
+    text: 'Standalone Blockchain for Each Application',
+    image: imageDetailsLayers,
+  }, {
+    text: 'Application Blockchain Development Kit',
+    image: imageDetailsWand,
+  }, {
+    text: 'Scalable Blockchain Node',
+    image: imageDetailsNetwork,
+  }, {
+    text: 'Off-chain Services',
+    image: imageDetailsShapes,
+  }, {
+    text: 'Blockchain Services',
+    image: imageDetailsLegoBlock,
+  }, {
+    text: 'Compatible with Existing Public Blockchains',
+    image: imageDetailsPlug,
+  }, {
+    text: 'Delegate Market',
+    image: imageDetailsBuilding,
+  }, {
+    text: 'Application Market',
+    image: imageDetailsShoppingCart,
+  }];
+
+  return (
+    <div className="details container section">
+      <h1>Here&apos;s how Vastdome works</h1>
+      <div className="space size-2" />
+      {
+        _.map(details, detail => (
+          <div className="detail">
+            <div
+              className="illustrate"
+              style={{
+                backgroundImage: `url("${detail.image}")`,
+              }}
+            />
+            <div className="text">
+              <p>{detail.text}</p>
+            </div>
+          </div>
+        ))
+      }
     </div>
-    <div className="detail">
-      <div
-        className="illustrate"
-        style={{
-          backgroundImage: `url("${detailsNetwork}")`,
-        }}
-      />
-      <div className="text">
-        <p>Scalable Blockchain Node</p>
-      </div>
-    </div>
-    <div className="detail">
-      <div
-        className="illustrate"
-        style={{
-          backgroundImage: `url("${detailsShapes}")`,
-        }}
-      />
-      <div className="text">
-        <p>Off-chain Services</p>
-      </div>
-    </div>
-    <div className="detail">
-      <div
-        className="illustrate"
-        style={{
-          backgroundImage: `url("${detailsLegoBlock}")`,
-        }}
-      />
-      <div className="text">
-        <p>Blockchain Services</p>
-      </div>
-    </div>
-    <div className="detail">
-      <div
-        className="illustrate"
-        style={{
-          backgroundImage: `url("${detailsPlug}")`,
-        }}
-      />
-      <div className="text">
-        <p>Compatible with Existing Public Blockchains</p>
-      </div>
-    </div>
-    <div className="detail">
-      <div
-        className="illustrate"
-        style={{
-          backgroundImage: `url("${detailsBuilding}")`,
-        }}
-      />
-      <div className="text">
-        <p>Delegate Market</p>
-      </div>
-    </div>
-    <div className="detail">
-      <div
-        className="illustrate"
-        style={{
-          backgroundImage: `url("${detailsShoppingCart}")`,
-        }}
-      />
-      <div className="text">
-        <p>Application Market</p>
-      </div>
-    </div>
-  </div>
-);
+  );
+};
 
 const DownloadSection = () => (
   <div className="downloads">
@@ -175,7 +124,7 @@ const DownloadSection = () => (
         <div
           className="illustrate"
           style={{
-            backgroundImage: `url("${downloadPapers}")`,
+            backgroundImage: `url("${imageDownloadPapers}")`,
           }}
         />
       </div>
@@ -196,28 +145,47 @@ const DownloadSection = () => (
   </div>
 );
 
-const StartSection = () => (
-  <div className="contacts container section">
-    <h1>Contact Us</h1>
-    <ButtonGroup className="contact-buttons">
-      <Button
-        className="pt-minimal pt-large contact-button"
-        icon={<div className="icon" style={{ backgroundImage: `url("${contactGitHub}")` }} />}
-        text="GitHub"
-      />
-      <Button
-        className="pt-minimal pt-large contact-button"
-        icon={<div className="icon" style={{ backgroundImage: `url("${contactTwitter}")` }} />}
-        text="Twitter"
-      />
-      <Button
-        className="pt-minimal pt-large contact-button"
-        icon={<div className="icon" style={{ backgroundImage: `url("${contactEmail}")` }} />}
-        text="Email"
-      />
-    </ButtonGroup>
-  </div>
-);
+const StartSection = () => {
+  const contacts = [{
+    name: 'GitHub',
+    icon: imageContactGitHub,
+    onClick: () => {
+      const tab = window.open('https://github.com/vastdome', '_blank');
+      tab.focus();
+    },
+  }, {
+    name: 'Twitter',
+    icon: imageContactTwitter,
+    onClick: () => {
+      const tab = window.open('https://twitter.com/vastdome', '_blank');
+      tab.focus();
+    },
+  }, {
+    name: 'Email',
+    icon: imageContactEmail,
+    onClick: () => {
+      window.location.href = 'mailto:contact@vastdome.io';
+    },
+  }];
+
+  return (
+    <div className="contacts container section">
+      <h1>Contact Us</h1>
+      <ButtonGroup className="contact-buttons">
+        {
+          _.map(contacts, contact => (
+            <Button
+              className="pt-minimal pt-large contact-button"
+              icon={<div className="icon" style={{ backgroundImage: `url("${contact.icon}")` }} />}
+              text={contact.name}
+              onClick={contact.onClick}
+            />
+          ))
+        }
+      </ButtonGroup>
+    </div>
+  );
+};
 
 const IndexPage = () => (
   <div>
