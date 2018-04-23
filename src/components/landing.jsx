@@ -8,12 +8,13 @@ class Landing extends React.Component {
   constructor() {
     super();
 
-    this.state = { landingHeight: 1000 };
+    this.state = { landingWidth: 1000, landingHeight: 1000 };
   }
 
   componentDidMount() {
     (() => {
       this.setState({
+        landingWidth: window.innerWidth,
         landingHeight: window.innerHeight,
       });
     })();
@@ -88,10 +89,26 @@ class Landing extends React.Component {
         />
         <div
           className="landing-text"
-          style={{
-            marginTop: -this.state.landingHeight + 20,
-            paddingTop: this.state.landingHeight * 0.35,
-          }}
+          style={(() => {
+            const style = {
+              marginTop: -this.state.landingHeight + 20,
+              paddingTop: this.state.landingHeight * 0.35,
+            };
+
+            if (this.state.landingWidth < 1000) {
+              style.paddingTop = this.state.landingHeight * 0.31;
+            }
+
+            if (this.state.landingWidth < 700) {
+              style.paddingTop = this.state.landingHeight * 0.29;
+            }
+
+            if (this.state.landingWidth < 500) {
+              style.paddingTop = this.state.landingHeight * 0.25;
+            }
+
+            return style;
+          })()}
         >
           <h1 className="title">
             <strong>The Next Generation Cloud</strong>

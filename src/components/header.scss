@@ -36,10 +36,6 @@
     margin-right: 5px;
   }
 
-  button {
-    outline: none !important;
-  }
-
   #navbar-brand {
     a {
       font-size: 1.5rem;
@@ -68,11 +64,6 @@
       color: map-get($colors, "white");
       text-decoration: none;
       margin: 10px 0 20px 10px;
-    }
-
-    button {
-      outline: none !important;
-      font-size: 1rem;
     }
 
     .pt-button-group {

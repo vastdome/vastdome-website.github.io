@@ -3,6 +3,7 @@
 #landing {
   margin-top: -90px;
   width: 100%;
+  min-height: 600px;
   background-color: map_get($colors, "purple-mirage");
 
   .landing-particles {
@@ -22,6 +23,8 @@
     }
 
     .title {
+      margin: 0 10%;
+      line-height: 3.5rem;
       text-transform: uppercase;
     }
 
@@ -63,6 +66,51 @@
     @keyframes blinker {
       50% {
         opacity: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #landing {
+    .landing-text {
+      .intro {
+        width: 60%;
+      }
+
+      .down-indicator {
+        margin-top: 90px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #landing {
+    .landing-text {
+
+      .intro {
+        width: 70%;
+      }
+
+      .down-indicator {
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #landing {
+    .landing-text {
+
+      .intro {
+        width: 80%;
+        font-size: 0.9rem;
+      }
+
+      .down-indicator {
+        margin-top: 30px;
       }
     }
   }

@@ -82,7 +82,9 @@ const DetailsSection = () => (
           backgroundImage: `url("${detailsLayers}")`,
         }}
       />
-      <p>Standalone Blockchain for Each Application</p>
+      <div className="text">
+        <p>Standalone Blockchain for Each Application</p>
+      </div>
     </div>
     <div className="detail">
       <div
@@ -91,7 +93,9 @@ const DetailsSection = () => (
           backgroundImage: `url("${detailsWand}")`,
         }}
       />
-      <p>Application Blockchain Development Kit</p>
+      <div className="text">
+        <p>Application Blockchain Development Kit</p>
+      </div>
     </div>
     <div className="detail">
       <div
@@ -100,7 +104,9 @@ const DetailsSection = () => (
           backgroundImage: `url("${detailsNetwork}")`,
         }}
       />
-      <p>Scalable Blockchain Node</p>
+      <div className="text">
+        <p>Scalable Blockchain Node</p>
+      </div>
     </div>
     <div className="detail">
       <div
@@ -109,7 +115,9 @@ const DetailsSection = () => (
           backgroundImage: `url("${detailsShapes}")`,
         }}
       />
-      <p>Off-chain Services</p>
+      <div className="text">
+        <p>Off-chain Services</p>
+      </div>
     </div>
     <div className="detail">
       <div
@@ -118,7 +126,9 @@ const DetailsSection = () => (
           backgroundImage: `url("${detailsLegoBlock}")`,
         }}
       />
-      <p>Blockchain Services</p>
+      <div className="text">
+        <p>Blockchain Services</p>
+      </div>
     </div>
     <div className="detail">
       <div
@@ -127,7 +137,9 @@ const DetailsSection = () => (
           backgroundImage: `url("${detailsPlug}")`,
         }}
       />
-      <p>Compatible with Existing Public Blockchains</p>
+      <div className="text">
+        <p>Compatible with Existing Public Blockchains</p>
+      </div>
     </div>
     <div className="detail">
       <div
@@ -136,7 +148,9 @@ const DetailsSection = () => (
           backgroundImage: `url("${detailsBuilding}")`,
         }}
       />
-      <p>Delegate Market</p>
+      <div className="text">
+        <p>Delegate Market</p>
+      </div>
     </div>
     <div className="detail">
       <div
@@ -145,7 +159,9 @@ const DetailsSection = () => (
           backgroundImage: `url("${detailsShoppingCart}")`,
         }}
       />
-      <p>Application Market</p>
+      <div className="text">
+        <p>Application Market</p>
+      </div>
     </div>
   </div>
 );
@@ -153,21 +169,8 @@ const DetailsSection = () => (
 const DownloadSection = () => (
   <div className="downloads">
     <div className="content container section">
-      <div className="left">
-        <h1>Download Documents</h1>
-        <div className="space size-2" />
-        <p>
-          Read the whitepaper and business plan for a deeper understanding about Vastdome
-          from the perspective of internal principles and future blueprints.
-        </p>
-        <div className="space size-2" />
-        <Tooltip className="pt-dark tip" content="Coming soon..." position={Position.TOP}>
-          <Button className="pt-intent-primary" icon="download" text="Download Whitepaper" />
-        </Tooltip>
-        <Tooltip className="pt-dark tip" content="Coming soon..." position={Position.TOP}>
-          <Button className="pt-intent-primary" icon="download" text="Download Business Plan" />
-        </Tooltip>
-      </div>
+      <h1 className="title">Download Documents</h1>
+      <div className="space size-2" />
       <div className="right">
         <div
           className="illustrate"
@@ -175,6 +178,19 @@ const DownloadSection = () => (
             backgroundImage: `url("${downloadPapers}")`,
           }}
         />
+      </div>
+      <div className="left">
+        <p>
+          Read the whitepaper and business plan for a deeper understanding about Vastdome
+          from the perspective of internal principles and future blueprints.
+        </p>
+        <div className="space size-2" />
+        <Tooltip className="pt-dark tip" content="Coming soon..." position={Position.TOP}>
+          <Button className="pt-intent-primary" icon="download" text="Whitepaper" />
+        </Tooltip>
+        <Tooltip className="pt-dark tip" content="Coming soon..." position={Position.TOP}>
+          <Button className="pt-intent-primary" icon="download" text="Business Plan" />
+        </Tooltip>
       </div>
     </div>
   </div>
@@ -185,17 +201,17 @@ const StartSection = () => (
     <h1>Contact Us</h1>
     <ButtonGroup className="contact-buttons">
       <Button
-        className="pt-minimal pt-large"
+        className="pt-minimal pt-large contact-button"
         icon={<div className="icon" style={{ backgroundImage: `url("${contactGitHub}")` }} />}
         text="GitHub"
       />
       <Button
-        className="pt-minimal pt-large"
+        className="pt-minimal pt-large contact-button"
         icon={<div className="icon" style={{ backgroundImage: `url("${contactTwitter}")` }} />}
         text="Twitter"
       />
       <Button
-        className="pt-minimal pt-large"
+        className="pt-minimal pt-large contact-button"
         icon={<div className="icon" style={{ backgroundImage: `url("${contactEmail}")` }} />}
         text="Email"
       />
@@ -217,7 +233,7 @@ const IndexPage = () => (
         <DetailsSection />
       </div>
       <div id="download">
-        <div className="space size-2" />
+        <div className="space size-3" />
         <DownloadSection />
       </div>
       <div id="contact">
