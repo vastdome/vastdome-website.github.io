@@ -30,7 +30,7 @@ class Header extends React.Component {
 
     this.scrollTimer = null;
 
-    this.handleScroll = this.handleScroll.bind(this);
+    this.handleWindowScroll = this.handleWindowScroll.bind(this);
     this.handleBurgerMenuStateChange = this.handleBurgerMenuStateChange.bind(this);
     this.closeBurgerMenu = this.closeBurgerMenu.bind(this);
   }
@@ -40,7 +40,7 @@ class Header extends React.Component {
     this.checkIsHome();
     this.checkIsOnTop();
 
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleWindowScroll);
   }
 
   componentDidUpdate() {
@@ -50,10 +50,10 @@ class Header extends React.Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('scroll', this.handleWindowScroll);
   }
 
-  handleScroll() {
+  handleWindowScroll() {
     if (this.scrollTimer === null) {
       this.checkIsOnTop();
     } else {

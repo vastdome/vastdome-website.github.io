@@ -186,10 +186,10 @@ const DownloadSection = () => (
         </p>
         <div className="space size-2" />
         <Tooltip className="pt-dark tip" content="Coming soon..." position={Position.TOP}>
-          <Button className="pt-intent-primary" icon="download" text="Whitepaper" />
+          <Button className="pt-intent-primary download-button" icon="download" text="Whitepaper" />
         </Tooltip>
         <Tooltip className="pt-dark tip" content="Coming soon..." position={Position.TOP}>
-          <Button className="pt-intent-primary" icon="download" text="Business Plan" />
+          <Button className="pt-intent-primary download-button" icon="download" text="Business Plan" />
         </Tooltip>
       </div>
     </div>
@@ -224,24 +224,17 @@ const IndexPage = () => (
     <Landing />
     <div id="welcome">
       <div id="features" >
-        <div className="space size-2" />
         <FeaturesSection />
       </div>
       <div className="divider" />
       <div id="details" >
-        <div className="space size-3" />
         <DetailsSection />
       </div>
       <div id="download">
-        <div className="space size-3" />
         <DownloadSection />
       </div>
       <div id="contact">
-        <div className="space size-3" />
-        <div className="space size-2" />
         <StartSection />
-        <div className="space size-3" />
-        <div className="space size-2" />
       </div>
     </div>
   </div>

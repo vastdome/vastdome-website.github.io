@@ -2,6 +2,8 @@
 
 #welcome {
   .features {
+    margin-top: 50px;
+
     h1 {
       color: map_get($colors, "grey-stone");
       text-align: center;
@@ -60,7 +62,21 @@
     }
   }
 
+  @media screen and (max-width: 400px) {
+    .features {
+      .feature {
+        .illustrate {
+          width: 256px;
+          height: 192px;
+          background-size: 256px 192px;
+        }
+      }
+    }
+  }
+
   .details {
+    margin-top: 50px;
+
     h1 {
       color: map_get($colors, "grey-stone");
       text-align: center;
@@ -138,8 +154,9 @@
   }
 
   .downloads {
-    height: 400px;
+    margin-top: 30px;
     padding: 80px 30px;
+    height: 400px;
     background-color: map_get($colors, "purple-bunting");
 
     .content {
@@ -211,7 +228,7 @@
   @media screen and (max-width: 910px) {
     .downloads {
       height: 600px;
-      padding: 60px 10px 30px 10px;
+      padding: 70px 10px 30px 10px;
 
       .content {
         text-align: center;
@@ -248,7 +265,28 @@
     }
   }
 
+  @media screen and (max-width: 400px) {
+    .downloads {
+      .content {
+        .left {
+          .download-button {
+            margin-bottom: 25px;
+          }
+        }
+
+        .right {
+          .illustrate {
+            width: 256px;
+            height: 149px;
+            background-size: 256px 149px;
+          }
+        }
+      }
+    }
+  }
+
   .contacts {
+    margin: 50px auto 50px auto;
     text-align: center;
 
     h1 {
@@ -286,6 +324,12 @@
           margin-top: 30px;
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .contacts {
+      margin: 20px auto 20px auto;
     }
   }
 

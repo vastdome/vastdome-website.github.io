@@ -9,15 +9,29 @@ class Landing extends React.Component {
     super();
 
     this.state = { landingWidth: 1000, landingHeight: 1000 };
+
+    this.handleWindowResize = this.handleWindowResize.bind(this);
   }
 
   componentDidMount() {
-    (() => {
-      this.setState({
-        landingWidth: window.innerWidth,
-        landingHeight: window.innerHeight,
-      });
-    })();
+    this.updateWindowDimension();
+
+    window.addEventListener('resize', this.handleWindowResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleWindowResize);
+  }
+
+  handleWindowResize() {
+    this.updateWindowDimension();
+  }
+
+  updateWindowDimension() {
+    this.setState({
+      landingWidth: window.innerWidth,
+      landingHeight: window.innerHeight,
+    });
   }
 
   render() {
@@ -96,7 +110,7 @@ class Landing extends React.Component {
             };
 
             if (this.state.landingWidth < 1000) {
-              style.paddingTop = this.state.landingHeight * 0.31;
+              style.paddingTop = this.state.landingHeight * 0.33;
             }
 
             if (this.state.landingWidth < 700) {
@@ -104,7 +118,7 @@ class Landing extends React.Component {
             }
 
             if (this.state.landingWidth < 500) {
-              style.paddingTop = this.state.landingHeight * 0.25;
+              style.paddingTop = this.state.landingHeight * 0.27;
             }
 
             return style;
