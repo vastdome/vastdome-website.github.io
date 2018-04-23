@@ -1,6 +1,14 @@
 @import "../styles/color";
 
 #welcome {
+  .offset-anchor {
+    border-top: 60px solid transparent;
+    margin: -60px 0 0;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+  }
+
   .features {
     margin-top: 50px;
 

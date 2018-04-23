@@ -192,17 +192,17 @@ const IndexPage = () => (
   <div>
     <Landing />
     <div id="welcome">
-      <div id="features" >
+      <div id="features" className="offset-anchor">
         <FeaturesSection />
       </div>
       <div className="divider" />
-      <div id="details" >
+      <div id="details" className="offset-anchor">
         <DetailsSection />
       </div>
-      <div id="download">
+      <div id="download" className="offset-anchor">
         <DownloadSection />
       </div>
-      <div id="contact">
+      <div id="contact" className="offset-anchor">
         <StartSection />
       </div>
     </div>
