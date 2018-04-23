@@ -8,7 +8,7 @@ class Landing extends React.Component {
   constructor() {
     super();
 
-    this.state = { landingWidth: 1000, landingHeight: 1000 };
+    this.state = { landingWidth: 1366, landingHeight: 768 };
 
     this.handleWindowResize = this.handleWindowResize.bind(this);
   }
