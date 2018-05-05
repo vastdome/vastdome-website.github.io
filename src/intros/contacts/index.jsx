@@ -3,30 +3,30 @@ import React from 'react';
 
 import { Button, ButtonGroup } from '@blueprintjs/core';
 
-import imageContactGitHub from './github-dark.png';
-import imageContactTwitter from './twitter-dark.png';
-import imageContactEmail from './email-dark.png';
+import imageGitHub from './github-dark.png';
+import imageTwitter from './twitter-dark.png';
+import imageEmail from './email-dark.png';
 
 import './index.scss';
 
 const Contacts = () => {
   const contacts = [{
     name: 'GitHub',
-    icon: imageContactGitHub,
+    icon: imageGitHub,
     onClick: () => {
       const tab = window.open('https://github.com/vastdome', '_blank');
       tab.focus();
     },
   }, {
     name: 'Twitter',
-    icon: imageContactTwitter,
+    icon: imageTwitter,
     onClick: () => {
       const tab = window.open('https://twitter.com/vastdome', '_blank');
       tab.focus();
     },
   }, {
     name: 'Email',
-    icon: imageContactEmail,
+    icon: imageEmail,
     onClick: () => {
       window.location.href = 'mailto:contact@vastdome.io';
     },

@@ -1,26 +1,26 @@
 import _ from 'lodash';
 import React from 'react';
 
-import imageFeaturesSimple from './simple.min.jpg';
-import imageFeaturesApplication from './application.min.jpg';
-import imageFeaturesGear from './gear.min.jpg';
-import imageFeaturesCloud from './cloud.min.jpg';
+import imageSimple from './simple.min.jpg';
+import imageApplication from './application.min.jpg';
+import imageGear from './gear.min.jpg';
+import imageCloud from './cloud.min.jpg';
 
 import './index.scss';
 
 const Features = () => {
   const features = [{
     title: 'Make Blockchain Simple',
-    image: imageFeaturesSimple,
+    image: imageSimple,
   }, {
     title: 'Application Oriented Design',
-    image: imageFeaturesApplication,
+    image: imageApplication,
   }, {
     title: 'Embrace Existing Ecology',
-    image: imageFeaturesGear,
+    image: imageGear,
   }, {
     title: 'Autonomous Cloud with Token Economy',
-    image: imageFeaturesCloud,
+    image: imageCloud,
   }];
 
   return (

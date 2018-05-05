@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Button, Tooltip, Position } from '@blueprintjs/core';
 
-import imageDownloadPapers from './papers.min.png';
+import imagePapers from './papers.min.png';
 
 import './index.scss';
 
@@ -15,7 +15,7 @@ const Download = () => (
         <div
           className="illustrate"
           style={{
-            backgroundImage: `url("${imageDownloadPapers}")`,
+            backgroundImage: `url("${imagePapers}")`,
           }}
         />
       </div>

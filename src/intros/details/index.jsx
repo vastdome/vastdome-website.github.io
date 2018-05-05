@@ -3,40 +3,40 @@ import React from 'react';
 
 import './index.scss';
 
-import imageDetailsLayers from './layers.svg';
-import imageDetailsWand from './wand.svg';
-import imageDetailsNetwork from './network.svg';
-import imageDetailsShapes from './shapes.svg';
-import imageDetailsLegoBlock from './lego-block.svg';
-import imageDetailsPlug from './plug.svg';
-import imageDetailsBuilding from './building.svg';
-import imageDetailsShoppingCart from './shopping-cart.svg';
+import imageLayers from './layers.svg';
+import imageWand from './wand.svg';
+import imageNetwork from './network.svg';
+import imageShapes from './shapes.svg';
+import imageLegoBlock from './lego-block.svg';
+import imagePlug from './plug.svg';
+import imageBuilding from './building.svg';
+import imageShoppingCart from './shopping-cart.svg';
 
 const Details = () => {
   const details = [{
     text: 'Standalone Blockchain for Each Application',
-    image: imageDetailsLayers,
+    image: imageLayers,
   }, {
     text: 'Application Blockchain Development Kit',
-    image: imageDetailsWand,
+    image: imageWand,
   }, {
     text: 'Scalable Blockchain Node',
-    image: imageDetailsNetwork,
+    image: imageNetwork,
   }, {
     text: 'Off-chain Services',
-    image: imageDetailsShapes,
+    image: imageShapes,
   }, {
     text: 'Blockchain Services',
-    image: imageDetailsLegoBlock,
+    image: imageLegoBlock,
   }, {
     text: 'Compatible with Existing Public Blockchains',
-    image: imageDetailsPlug,
+    image: imagePlug,
   }, {
     text: 'Delegate Market',
-    image: imageDetailsBuilding,
+    image: imageBuilding,
   }, {
     text: 'Application Market',
-    image: imageDetailsShoppingCart,
+    image: imageShoppingCart,
   }];
 
   return (
