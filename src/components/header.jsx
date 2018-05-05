@@ -134,7 +134,7 @@ class Header extends React.Component {
             className="pt-minimal pt-ui-text"
             icon="info-sign"
             text="About"
-            active={this.state.currentFullPath.startsWith('/#detail')}
+            active={this.state.currentFullPath.startsWith('/#details')}
             onClick={this.closeBurgerMenu}
           />
         </Scrollchor>
@@ -143,7 +143,7 @@ class Header extends React.Component {
             className="pt-minimal pt-ui-text"
             icon="download"
             text="Download"
-            active={this.state.currentFullPath.startsWith('/#download')}
+            active={this.state.currentFullPath.startsWith('/#downloads')}
             onClick={this.closeBurgerMenu}
           />
         </Scrollchor>
@@ -152,7 +152,7 @@ class Header extends React.Component {
             className="pt-minimal pt-ui-text"
             icon="chat"
             text="Contact"
-            active={this.state.currentFullPath.startsWith('/#contact')}
+            active={this.state.currentFullPath.startsWith('/#contacts')}
             onClick={this.closeBurgerMenu}
           />
         </Scrollchor>

@@ -1,0 +1,135 @@
+@import "../../styles/color";
+
+#welcome {
+  .downloads {
+    margin-top: 30px;
+    padding: 80px 30px;
+    height: 400px;
+    background-color: map_get($colors, "purple-bunting");
+
+    .content {
+      padding: 0 5%;
+
+      .title {
+        color: map_get($colors, "white");
+        font-size: 1.7rem;
+        font-weight: 300;
+      }
+
+      .left {
+        display: inline-block;
+        width: 50%;
+        color: map_get($colors, "white");
+        font-size: 1rem;
+        font-weight: 300;
+
+        .tip {
+          margin-right: 10px;
+        }
+      }
+
+      .right {
+        display: inline-block;
+        float: right;
+
+        .illustrate {
+          width: 360px;
+          height: 210px;
+          margin: -70px 20px 0 10px;
+          background: no-repeat center;
+          background-size: 360px 210px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+    .downloads {
+      .content {
+        .left {
+          width: 45%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1050px) {
+    .downloads {
+      .content {
+        .left {
+          width: 40%;
+
+          p {
+            font-size: .9rem;
+          }
+        }
+
+        .right {
+          .illustrate {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 910px) {
+    .downloads {
+      height: 600px;
+      padding: 70px 10px 30px 10px;
+
+      .content {
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+
+        .left {
+          width: 80%;
+        }
+
+        .right {
+          width: 100%;
+
+          .illustrate {
+            margin: 10px auto 30px auto;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .downloads {
+      .content {
+        .right {
+          .illustrate {
+            width: 324px;
+            height: 189px;
+            margin: 10px auto 30px auto;
+            background-size: 324px 189px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .downloads {
+      .content {
+        .left {
+          .download-button {
+            margin-bottom: 25px;
+          }
+        }
+
+        .right {
+          .illustrate {
+            width: 256px;
+            height: 149px;
+            background-size: 256px 149px;
+          }
+        }
+      }
+    }
+  }
+}
