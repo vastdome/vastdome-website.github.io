@@ -138,7 +138,7 @@ class Header extends React.Component {
             onClick={this.closeBurgerMenu}
           />
         </Scrollchor>
-        <Scrollchor to="#download">
+        <Scrollchor to="#downloads">
           <Button
             className="pt-minimal pt-ui-text"
             icon="download"
@@ -147,7 +147,7 @@ class Header extends React.Component {
             onClick={this.closeBurgerMenu}
           />
         </Scrollchor>
-        <Scrollchor to="#contact">
+        <Scrollchor to="#contacts">
           <Button
             className="pt-minimal pt-ui-text"
             icon="chat"
