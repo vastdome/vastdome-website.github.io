@@ -11,11 +11,14 @@
   width: 100%;
   height: 90px;
   background-color: map_get($colors, "white");
-  -webkit-transition: height 0.3s ease-out, padding-top 0.3s ease-out;
-  -moz-transition: height 0.3s ease-out, padding-top 0.3s ease-out;
-  -ms-transition: height 0.3s ease-out, padding-top 0.3s ease-out;
-  -o-transition: height 0.3s ease-out, padding-top 0.3s ease-out;
-  transition: height 0.3s ease-out, padding-top 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out, padding-top 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out, padding-top 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out, padding-top 0.3s ease-out;
+  -o-transition: all 0.3s ease-out, padding-top 0.3s ease-out;
+  transition: all 0.3s ease-out, padding-top 0.3s ease-out;
+  -webkit-box-shadow: 0 9px 18px rgba(50,50,93,.1),0 8px 15px rgba(0,0,0,.07);
+  -moz-box-shadow: 0 9px 18px rgba(50,50,93,.1),0 8px 15px rgba(0,0,0,.07);
+  box-shadow: 0 9px 18px rgba(50,50,93,.1),0 8px 15px rgba(0,0,0,.07);
 
   &.smaller {
     padding-top: 5px;
@@ -46,8 +49,12 @@
     margin-right: 5px;
 
     button {
-      svg, span {
+      span {
         color: map-get($colors, "grey-mine");
+      }
+
+      svg{
+        color: map-get($colors, "grey-dark");
       }
     }
   }
@@ -93,8 +100,12 @@
         }
 
         button {
-          svg, span {
+          span {
             color: map-get($colors, "grey-mine");
+          }
+
+          svg{
+            color: map-get($colors, "grey-dark");
           }
         }
       }
