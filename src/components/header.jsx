@@ -101,7 +101,7 @@ class Header extends React.Component {
       offset = isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
     }
 
-    const isOnTop = offset <= 0;
+    const isOnTop = offset === 0;
     if (this.state.isOnTop !== isOnTop) {
       this.setState({ isOnTop });
     }
@@ -164,9 +164,10 @@ class Header extends React.Component {
         <Navbar
           id="navbar"
           className={(() => {
-            const cls = ['pt-dark'];
+            const cls = [];
             if (this.state.isOnTop) {
               if (this.state.isHome) {
+                cls.push('pt-dark');
                 cls.push('transparent');
               }
             } else {
@@ -182,7 +183,7 @@ class Header extends React.Component {
               </NavbarHeading>
             </NavbarGroup>
             <NavbarGroup id="navbar-items" align={Alignment.RIGHT}>
-              <ButtonGroup className="pt-dark">
+              <ButtonGroup>
                 {links}
               </ButtonGroup>
             </NavbarGroup>
@@ -208,7 +209,7 @@ class Header extends React.Component {
               />
             }
           >
-            <ButtonGroup className="pt-dark">{links}</ButtonGroup>
+            <ButtonGroup>{links}</ButtonGroup>
           </Menu>
         </div>
       </div>
