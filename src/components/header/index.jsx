@@ -14,7 +14,7 @@ import {
 } from '@blueprintjs/core';
 import { stack as Menu } from 'react-burger-menu';
 
-import './header.scss';
+import './index.scss';
 
 class Header extends React.Component {
   constructor() {
@@ -189,24 +189,27 @@ class Header extends React.Component {
             </NavbarGroup>
           </div>
         </Navbar>
-        <div id="navbar-burger">
+        <div
+          id="navbar-burger"
+          className={(() => {
+            const cls = [];
+            if (this.state.isOnTop) {
+              if (this.state.isHome) {
+                cls.push('transparent');
+              }
+            } else {
+              cls.push('smaller');
+            }
+            return classnames(cls);
+          })()}
+        >
           <Menu
             isOpen={this.state.isBurgerMenuOpen}
             onStateChange={this.handleBurgerMenuStateChange}
             right
             width="240px"
             customBurgerIcon={
-              <Icon
-                className={(() => {
-                  const cls = [];
-                  if (!this.state.isOnTop) {
-                    cls.push('smaller');
-                  }
-                  return classnames(cls);
-                })()}
-                icon="menu"
-                iconSize={30}
-              />
+              <Icon icon="menu" iconSize={30} />
             }
           >
             <ButtonGroup>{links}</ButtonGroup>

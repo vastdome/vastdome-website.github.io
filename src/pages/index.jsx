@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Landing from '../components/landing';
+import Landing from '../intros/landing';
 
 import Features from '../intros/features';
 import Details from '../intros/details';

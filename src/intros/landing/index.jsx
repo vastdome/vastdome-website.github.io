@@ -3,7 +3,7 @@ import Particles from 'react-particles-js';
 import { Button, ButtonGroup, Icon } from '@blueprintjs/core';
 import Scrollchor from 'react-scrollchor';
 
-import './landing.scss';
+import './index.scss';
 
 class Landing extends React.Component {
   constructor() {

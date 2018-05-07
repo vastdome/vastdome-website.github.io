@@ -1,10 +1,12 @@
-@import "../styles/color";
+@import "../../styles/color";
 
 #landing {
   margin-top: -90px;
   width: 100%;
   min-height: 650px;
-  background-color: map_get($colors, "grey-volcanos");
+  background-image: -moz-linear-gradient(-90deg, #1c1e28 0%, #1c1e28 65%, #313443 100%);
+  background-image: -webkit-linear-gradient(-90deg, #1c1e28 0%, #1c1e28 65%, #313443 100%);
+  background-image: -ms-linear-gradient(-90deg, #1c1e28 0%, #1c1e28 65%, #313443 100%);
 
   .landing-particles {
     z-index: -1000;

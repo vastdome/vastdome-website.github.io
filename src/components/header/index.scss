@@ -1,4 +1,4 @@
-@import "../styles/color";
+@import "../../styles/color";
 
 #navbar-floor {
   width: 100%;
@@ -74,10 +74,42 @@
   #navbar-burger {
     display: block;
 
+    &.transparent {
+      a {
+        color: map-get($colors, "white");
+      }
+
+      .bm-burger-button {
+        color: map-get($colors, "white");
+
+        &:hover {
+          background: map-get($colors, "grey-stone");
+        }
+      }
+
+      .bm-menu {
+        a {
+          color: map-get($colors, "grey-mine");
+        }
+
+        button {
+          svg, span {
+            color: map-get($colors, "grey-mine");
+          }
+        }
+      }
+    }
+
+    &.smaller {
+      .bm-burger-button {
+        top: 17px;
+      }
+    }
+
     a {
       display: block;
       width: 100%;
-      color: map-get($colors, "white");
+      color: map-get($colors, "grey-mine");
       text-decoration: none;
       margin: 10px 0 20px 10px;
     }
@@ -95,19 +127,15 @@
       right: 8%;
       padding: 5px;
       border-radius: 3px;
-      color: map-get($colors, "white");
+      color: map-get($colors, "grey-mine");
       -webkit-transition: top 0.3s ease-out;
       -moz-transition: top 0.3s ease-out;
       -ms-transition: top 0.3s ease-out;
       -o-transition: top 0.3s ease-out;
       transition: top 0.3s ease-out;
 
-      &.smaller {
-        top: 17px;
-      }
-
       &:hover {
-        background: map-get($colors, "grey-storm");
+        background: map-get($colors, "grey-iron");
       }
     }
 
@@ -115,7 +143,7 @@
       background: map-get($colors, "white");
     }
 
-    /* Position and sizing of clickable cross button */
+    /* Position and sizing of click-able cross button */
     .bm-cross-button {
       height: 24px;
       width: 24px;
@@ -126,7 +154,7 @@
     }
 
     .bm-menu {
-      background: map_get($colors, "grey-volcanos");
+      background: map_get($colors, "white");
       padding: 2.5em 1.5em 0;
       font-size: 1.15em;
     }
