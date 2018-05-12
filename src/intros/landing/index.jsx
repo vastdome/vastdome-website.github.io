@@ -55,7 +55,14 @@ class Landing extends React.Component {
           (() => {
             if (this.state.isDebug) {
               return (
-                <div style={{ height: this.state.landingHeight }} />
+                <div className="landing-particles">
+                  <canvas
+                    style={{
+                      width: this.state.landingWidth,
+                      height: this.state.landingHeight,
+                    }}
+                  />
+                </div>
               );
             }
             return (
