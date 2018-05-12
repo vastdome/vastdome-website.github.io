@@ -76,4 +76,20 @@
       }
     }
   }
+
+  @media screen and (max-width: 500px) {
+    .features {
+      .feature {
+        width: 100%;
+
+        .card {
+          width: 320px;
+
+          h3 {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
 }
