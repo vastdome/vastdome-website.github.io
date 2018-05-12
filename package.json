@@ -4,24 +4,24 @@
   "version": "1.0.0",
   "author": "Vastdome Developers <developers@vastdome.io>",
   "dependencies": {
-    "@blueprintjs/core": "^2.2.0",
-    "@blueprintjs/icons": "^2.1.1",
+    "@blueprintjs/core": "^2.3.1",
+    "@blueprintjs/icons": "^2.2.1",
     "classnames": "^2.2.5",
-    "gatsby": "^1.9.247",
-    "gatsby-link": "^1.6.40",
+    "gatsby": "^1.9.261",
+    "gatsby-link": "^1.6.44",
     "gatsby-plugin-nprogress": "^1.0.14",
-    "gatsby-plugin-react-helmet": "^2.0.10",
+    "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-sass": "^1.0.26",
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.10",
     "normalize.css": "^8.0.0",
     "nprogress": "^0.2.0",
     "prop-types": "^15.6.1",
-    "react": "^16.3.2",
-    "react-burger-menu": "^2.4.2",
-    "react-dom": "^16.3.2",
+    "react": "^16.4.0",
+    "react-burger-menu": "^2.4.4",
+    "react-dom": "^16.4.0",
     "react-helmet": "^5.2.0",
-    "react-particles-js": "^2.1.2",
-    "react-scrollchor": "^5.0.1",
+    "react-particles-js": "^2.2.0",
+    "react-scrollchor": "^5.0.2",
     "react-transition-group": "^2.3.1"
   },
   "license": "GPL-3.0",
@@ -33,9 +33,9 @@
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.7.0",
-    "gatsby-cli": "^1.1.50"
+    "eslint-plugin-react": "^7.8.2",
+    "gatsby-cli": "^1.1.52"
   }
 }
