@@ -9,12 +9,17 @@ class Landing extends React.Component {
   constructor() {
     super();
 
-    this.state = { landingWidth: 1366, landingHeight: 768 };
+    this.state = {
+      landingWidth: 1366,
+      landingHeight: 768,
+      isDebug: false,
+    };
 
     this.handleWindowResize = this.handleWindowResize.bind(this);
   }
 
   componentDidMount() {
+    this.detectDebug();
     this.updateWindowDimension();
 
     window.addEventListener('resize', this.handleWindowResize);
@@ -28,6 +33,14 @@ class Landing extends React.Component {
     this.updateWindowDimension();
   }
 
+  detectDebug() {
+    if (window.localStorage.getItem('DEBUG') === 'true') {
+      this.setState({
+        isDebug: true,
+      });
+    }
+  }
+
   updateWindowDimension() {
     this.setState({
       landingWidth: window.innerWidth,
@@ -38,70 +51,81 @@ class Landing extends React.Component {
   render() {
     return (
       <div id="landing" style={{ height: this.state.landingHeight }}>
-        <Particles
-          className="landing-particles"
-          height={this.state.landingHeight}
-          params={{
-            particles: {
-              number: {
-                value: 50,
-                density: {
-                  enable: true,
-                  value_area: 1000,
-                },
-              },
-              color: {
-                value: '#ffffff',
-              },
-              shape: {
-                type: 'circle',
-                stroke: {
-                  width: 0,
-                  color: '#000000',
-                },
-                polygon: {
-                  nb_sides: 5,
-                },
-              },
-              opacity: {
-                value: 1,
-                random: true,
-                anim: {
-                  enable: true,
-                  speed: 1,
-                  opacity_min: 0,
-                  sync: false,
-                },
-              },
-              size: {
-                value: 3,
-                random: true,
-                anim: {
-                  enable: false,
-                  speed: 4,
-                  size_min: 0.3,
-                  sync: false,
-                },
-              },
-              line_linked: {
-                enable: false,
-              },
-              move: {
-                enable: true,
-                speed: 0.5,
-                direction: 'none',
-                random: true,
-                straight: false,
-                out_mode: 'out',
-                bounce: false,
-                attract: {
-                  enable: false,
-                },
-              },
-            },
-            retina_detect: true,
-          }}
-        />
+        {
+          (() => {
+            if (this.state.isDebug) {
+              return (
+                <div style={{ height: this.state.landingHeight }} />
+              );
+            }
+            return (
+              <Particles
+                className="landing-particles"
+                height={this.state.landingHeight}
+                params={{
+                  particles: {
+                    number: {
+                      value: 50,
+                      density: {
+                        enable: true,
+                        value_area: 1000,
+                      },
+                    },
+                    color: {
+                      value: '#ffffff',
+                    },
+                    shape: {
+                      type: 'circle',
+                      stroke: {
+                        width: 0,
+                        color: '#000000',
+                      },
+                      polygon: {
+                        nb_sides: 5,
+                      },
+                    },
+                    opacity: {
+                      value: 1,
+                      random: true,
+                      anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0,
+                        sync: false,
+                      },
+                    },
+                    size: {
+                      value: 3,
+                      random: true,
+                      anim: {
+                        enable: false,
+                        speed: 4,
+                        size_min: 0.3,
+                        sync: false,
+                      },
+                    },
+                    line_linked: {
+                      enable: false,
+                    },
+                    move: {
+                      enable: true,
+                      speed: 0.5,
+                      direction: 'none',
+                      random: true,
+                      straight: false,
+                      out_mode: 'out',
+                      bounce: false,
+                      attract: {
+                        enable: false,
+                      },
+                    },
+                  },
+                  retina_detect: true,
+                }}
+              />
+            );
+          })()
+        }
         <div
           className="landing-text"
           style={(() => {
