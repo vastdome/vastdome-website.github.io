@@ -22,22 +22,22 @@
 <g>
 	<g>
 		<g>
-			<path d="M24,15H0V4h24V15z M2,13h20V6H2V13z"/>
+			<path fill="#486598" d="M24,15H0V4h24V15z M2,13h20V6H2V13z"/>
 		</g>
 	</g>
 	<g>
 		<g>
-			<path d="M10,6H2V0h8V6z M4,4h4V2H4V4z"/>
+			<path fill="#486598" d="M10,6H2V0h8V6z M4,4h4V2H4V4z"/>
 		</g>
 	</g>
 	<g>
 		<g>
-			<path d="M22,6h-8V0h8V6z M16,4h4V2h-4V4z"/>
+			<path fill="#486598" d="M22,6h-8V0h8V6z M16,4h4V2h-4V4z"/>
 		</g>
 	</g>
 	<g>
 		<g>
-			<path d="M24,24H0V13h24V24z M2,22h20v-7H2V22z"/>
+			<path fill="#486598" d="M24,24H0V13h24V24z M2,22h20v-7H2V22z"/>
 		</g>
 	</g>
 </g>
