@@ -1,70 +1,68 @@
 @import "../../styles/color";
 
-#welcome {
+.details {
+  margin-top: 50px;
+
+  h1 {
+    color: map_get($colors, "grey-stone");
+    text-align: center;
+  }
+
+  ul {
+    padding: 0;
+    margin: auto;
+    list-style: none;
+
+    .detail {
+      display: inline-block;
+      vertical-align: top;
+      margin: 20px 0 20px 3%;
+      width: 30%;
+
+      .illustrate {
+        width: 50px;
+        height: 50px;
+        background: no-repeat center;
+        background-size: 40px 40px;
+      }
+
+      .title {
+        margin: 15px 0;
+        font-size: 1.1rem;
+        font-weight: 400;
+        text-align: left;
+        color: map_get($colors, "blue-dark");
+      }
+
+      .text {
+        margin: 10px 0;
+        font-size: 1rem;
+        font-weight: 200;
+        text-align: left;
+        color: map_get($colors, "grey-stone");
+        line-height: 1.6rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
   .details {
-    margin-top: 50px;
-
-    h1 {
-      color: map_get($colors, "grey-stone");
-      text-align: center;
-    }
-
     ul {
-      padding: 0;
-      margin: auto;
-      list-style: none;
-
       .detail {
-        display: inline-block;
-        vertical-align: top;
-        margin: 20px 0 20px 3%;
-        width: 30%;
-
-        .illustrate {
-          width: 50px;
-          height: 50px;
-          background: no-repeat center;
-          background-size: 40px 40px;
-        }
-
-        .title {
-          margin: 15px 0;
-          font-size: 1.1rem;
-          font-weight: 400;
-          text-align: left;
-          color: map_get($colors, "blue-dark");
-        }
-
-        .text {
-          margin: 10px 0;
-          font-size: 1rem;
-          font-weight: 200;
-          text-align: left;
-          color: map_get($colors, "grey-stone");
-          line-height: 1.6rem;
-        }
+        margin: 20px 0 20px 5%;
+        width: 45%;
       }
     }
   }
+}
 
-  @media screen and (max-width: 800px) {
-    .details {
-      ul {
-        .detail {
-          margin: 20px 0 20px 5%;
-          width: 45%;
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 500px) {
-    .details {
-      ul {
-        .detail {
-          margin: 20px 0 20px 10%;
-          width: 90%;
-        }
+@media screen and (max-width: 500px) {
+  .details {
+    ul {
+      .detail {
+        margin: 20px 0 20px 10%;
+        width: 90%;
       }
     }
   }
