@@ -119,7 +119,7 @@ class Header extends React.Component {
 
   render() {
     const links = (
-      <ButtonGroup className="pt-dark">
+      <ButtonGroup>
         <Scrollchor to="#features">
           <Button
             className="pt-minimal pt-ui-text"
