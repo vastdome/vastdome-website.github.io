@@ -1,0 +1,129 @@
+@import "../../styles/color";
+
+.scenarios {
+  margin-top: 50px;
+
+  h1 {
+    color: map_get($colors, "grey-stone");
+    text-align: center;
+  }
+
+  .content {
+    margin-top: 70px;
+    padding: 0;
+    height: 350px;
+    overflow: hidden;
+
+    .slider {
+      height: 350px;
+
+      button {
+        border-radius: 50px;
+      }
+    }
+
+    .slide {
+      &.animateIn, &.animateOut {
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease;
+      }
+
+      &.animateIn {
+        &.previous, &.next {
+          left: 0;
+          visibility: visible;
+        }
+      }
+    }
+
+
+    .item {
+      .figure {
+        margin-left: -6%;
+        width: 50%;
+        height: 350px;
+        background-color: map_get($colors, "grey-iron");
+        transform: skewX(-20deg);
+        overflow: hidden;
+        float: left;
+
+        .image {
+          margin-left: 12%;
+          width: 100%;
+          height: 350px;
+          background-color: map_get($colors, "grey-stone");
+          transform: skewX(20deg);
+
+          p {
+            padding-top: 145px;
+            width: 90%;
+            font-size: 2.5rem;
+            font-weight: 200;
+            font-style: italic;
+            text-align: center;
+            color: map_get($colors, "grey-moon");
+          }
+        }
+      }
+
+      .text {
+        float: right;
+        padding: 110px 80px 0 20px;
+        width: 50%;
+        height: 350px;
+
+        p {
+          font-size: 1rem;
+          font-weight: 200;
+          text-align: left;
+          color: map_get($colors, "blue-dark");
+          line-height: 1.8rem;
+        }
+      }
+    }
+  }
+
+  .titles {
+    margin: 40px 0 50px 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+
+    .title {
+      display: inline-block;
+      margin-left: 20px;
+      margin-right: 20px;
+
+      button {
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: map_get($colors, "blue-dark");
+        opacity: .5;
+        -webkit-transition: opacity .5s;
+        -moz-transition: opacity .5s;
+        -ms-transition: opacity .5s;
+        -o-transition: opacity .5s;
+        transition: opacity .5s;
+
+        &:hover {
+          background: none;
+          opacity: 1;
+          -webkit-transition: opacity .5s;
+          -moz-transition: opacity .5s;
+          -ms-transition: opacity .5s;
+          -o-transition: opacity .5s;
+          transition: opacity .5s;
+        }
+
+        &.selected {
+          opacity: 1;
+          -webkit-transition: opacity .5s;
+          -moz-transition: opacity .5s;
+          -ms-transition: opacity .5s;
+          -o-transition: opacity .5s;
+          transition: opacity .5s;
+        }
+      }
+    }
+  }
+}

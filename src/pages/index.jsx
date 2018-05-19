@@ -17,18 +17,27 @@ const IndexPage = () => (
   <div>
     <Landing />
     <div id="welcome">
-      <div id="features" className="offset-anchor">
-        <Features />
+      <div className="index-section-1">
+        <div id="features" className="offset-anchor">
+          <Features />
+        </div>
+        <div className="divider" />
+        <div id="details" className="offset-anchor">
+          <Details />
+        </div>
       </div>
-      <div className="divider" />
-      <div id="details" className="offset-anchor">
-        <Details />
-      </div>
-      <div id="scenarios" className="offset-anchor">
-        <Scenarios />
-      </div>
-      <div id="architecture" className="offset-anchor">
-        <Architecture />
+      <div className="index-section-2" />
+      <div className="index-section-3">
+        <div className="index-section-3-content">
+          <div className="divider" />
+          <div id="scenarios" className="offset-anchor">
+            <Scenarios />
+          </div>
+          <div className="divider" />
+          <div id="architecture" className="offset-anchor">
+            <Architecture />
+          </div>
+        </div>
       </div>
       <div id="roadmap" className="offset-anchor">
         <Roadmap />
