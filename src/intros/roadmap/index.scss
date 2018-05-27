@@ -1,19 +1,187 @@
 @import "../../styles/color";
 
 .roadmap {
-  margin-top: 30px;
 
   h1 {
-    color: map_get($colors, "grey-stone");
+    color: map_get($colors, "grey-platinum");
     text-align: center;
   }
 
   .steps-table {
-    grid-gap: 10px;
-    padding: 10px;
-    margin: 0 -10px;
+    margin: 50px 0 150px 0;
+    padding: 10px 10px 0 10px;
     border-radius: 8px;
     background: #e6ebf1;
-    text-align: center;
+    text-align: left;
+
+    .column {
+      display: inline-block;
+      padding: 3px;
+      width: 20%;
+      vertical-align: top;
+      text-align: center;
+
+      &:first-child {
+        .header, .header:after {
+          background-color: #264376;
+        }
+      }
+
+      &:nth-child(2) {
+        .header, .header:after {
+          background-color: #2a5289;
+        }
+      }
+
+      &:nth-child(3) {
+        .header, .header:after {
+          background-color: #2e619c;
+        }
+      }
+
+      &:nth-child(4) {
+        .header, .header:after {
+          background-color: #3171af;
+        }
+      }
+
+      &:nth-child(5) {
+        .header, .header:after {
+          background-color: #3c87cf;
+        }
+      }
+
+      &:not(:last-child) {
+        .header:after {
+          content: "";
+          position: absolute;
+          z-index: 10;
+          right: -6px;
+          top: calc(50% - 10px);
+          width: 20px;
+          height: 20px;
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+          border-radius: 3px;
+        }
+      }
+
+      &:not(:first-child) {
+        .header:before {
+          content: "";
+          position: absolute;
+          left: -5px;
+          top: calc(50% - 16px);
+          width: 15px;
+          height: 32px;
+          background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNSAzMiI+PHBhdGggZD0iTTAgMGwxNC4yOSAxNC4yOGMuOTUuOTUuOTUgMi40OSAwIDMuNDNMMCAzMlYweiIgZmlsbD0iI2U2ZWJmMSIvPjwvc3ZnPg==);
+        }
+      }
+
+      .header {
+        border-radius: 4px;
+        -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+        box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+        margin-bottom: 10px;
+        position: relative;
+
+        p {
+          height: 70px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          padding: 15px;
+          color: #fff;
+          font-weight: 300;
+          -webkit-transition: color .15s;
+          transition: color .15s;
+        }
+      }
+
+      .content {
+        border-radius: 4px;
+        -webkit-box-shadow: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
+        box-shadow: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
+        background: #fff;
+        padding: 4px 0;
+        font-size: 15px;
+        line-height: 22px;
+        color: #6772e5;
+
+        ul, li {
+          list-style: none;
+        }
+
+        li {
+          margin-top: 15px;
+          margin-bottom: 15px;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+
+        .group-header {
+          color: #32325d;
+
+          &:not(:first-child) {
+            border-top: 2px solid #eceff2;
+            padding-top: 15px;
+          }
+
+          p {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 22px;
+            color: map_get($colors, "blue-deep");
+          }
+        }
+      }
+
+      .time-header {
+        border-radius: 4px;
+        -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+        box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+        margin-bottom: 0;
+        position: relative;
+        padding: 4px 0;
+        font-size: 15px;
+        line-height: 22px;
+        background-color: map_get($colors, "grey-moon");
+
+        p {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          font-weight: 400;
+          color: map_get($colors, "blue-deep");
+          font-style: italic;
+        }
+      }
+    }
   }
 }
+
+@media screen and (max-width: 800px) {
+  .roadmap {
+    .steps-table {
+      .column {
+        width: 33%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .roadmap {
+    .steps-table {
+      .column {
+        width: 100%;
+      }
+    }
+  }
+}
+
