@@ -36,11 +36,16 @@ const IndexPage = () => (
           </div>
         </div>
       </div>
-      <div id="roadmap" className="offset-anchor">
-        <Roadmap />
+      <div className="index-section-3-fill" />
+      <div className="index-section-4">
+        <div id="roadmap" className="offset-anchor">
+          <Roadmap />
+        </div>
       </div>
-      <div id="comparision" className="offset-anchor">
-        <Comparision />
+      <div className="index-section-5">
+        <div id="comparision" className="offset-anchor">
+          <Comparision />
+        </div>
       </div>
       <div id="downloads" className="offset-anchor">
         <Downloads />
