@@ -21,7 +21,6 @@ const IndexPage = () => (
         <div id="features" className="offset-anchor">
           <Features />
         </div>
-        <div className="divider" />
         <div id="details" className="offset-anchor">
           <Details />
         </div>
@@ -29,11 +28,9 @@ const IndexPage = () => (
       <div className="index-section-2" />
       <div className="index-section-3">
         <div className="index-section-3-content">
-          <div className="divider" />
           <div id="scenarios" className="offset-anchor">
             <Scenarios />
           </div>
-          <div className="divider" />
           <div id="architecture" className="offset-anchor">
             <Architecture />
           </div>
