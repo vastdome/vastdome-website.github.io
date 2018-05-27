@@ -1,0 +1,21 @@
+@import "../../styles/color";
+
+.architecture {
+  margin-top: 50px;
+
+  h1 {
+    color: map_get($colors, "grey-stone");
+    text-align: center;
+  }
+
+  .content {
+    margin-top: 70px;
+    width: 100%;
+    text-align: center;
+
+    .image {
+      width: 90%;
+      pointer-events: none;
+    }
+  }
+}
