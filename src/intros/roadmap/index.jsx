@@ -58,15 +58,15 @@ const Roadmap = () => {
       <h1>Roadmap</h1>
       <div className="steps-table pt-card pt-elevation-2">
         {
-          _.map(steps, step => {
-            const items = _.map(step.sections, section => (
-              <li key={section} className="group-header">
+          _.map(steps, (step, i) => {
+            const items = _.map(step.sections, (section, j) => (
+              <li key={j} className="group-header">
                 <p>{section}</p>
               </li>
             ));
 
             return (
-              <div key={step.title} className="column">
+              <div key={i} className="column">
                 <h3 className="header">
                   <p>{step.title}</p>
                 </h3>
