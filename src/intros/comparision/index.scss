@@ -1,0 +1,100 @@
+@import "../../styles/color";
+
+.comparision {
+  h1 {
+    color: map_get($colors, "grey-stone");
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+    min-width: 700px;
+    text-align: center;
+    border-collapse: collapse;
+
+    thead {
+      tr {
+        th {
+          &:first-child {
+            .header {
+              background-color: transparent;
+            }
+          }
+
+          .header {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            padding-top: 15px;
+            padding-bottom: 5px;
+
+            h3 {
+              font-size: 1.2rem;
+              font-style: italic;
+              color: map_get($colors, "grey-stone");
+            }
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        &:first-child, &:nth-child(3), &:nth-child(5) {
+          background-color: map_get($colors, "grey-mystic");
+        }
+
+        td {
+          width: 12%;
+
+          &:first-child {
+            text-align: left;
+            width: 30%;
+          }
+
+          .item {
+            margin: 5px;
+            padding-top: 15px;
+            padding-bottom: 5px;
+
+            p {
+              font-size: 1rem;
+              color: map_get($colors, "grey-stone");
+            }
+          }
+
+          .value {
+            margin: 5px;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            border-radius: 20px;
+            background-color: map_get($colors, "blue-feeble");
+            opacity: .9;
+
+            .check {
+              svg {
+                fill: map_get($colors, "grey-moon")
+              }
+            }
+
+            .cross {
+              svg {
+                fill: map_get($colors, "grey-santas")
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .table-card {
+    margin-top: 50px;
+    margin-bottom: 80px;
+    background-color: map_get($colors, "grey-moon");
+
+    .table-content {
+      margin: 20px;
+      overflow: scroll;
+    }
+  }
+}
